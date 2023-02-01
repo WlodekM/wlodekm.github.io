@@ -72,6 +72,17 @@ h2 code {
     function spamtond() {
       location.replace("https://wlodekm.github.io/development/funni")
     }
+    function spam_hower() {
+
+        document.getElementById("funni").innerHTML = "there is nothing here, stop trying";
+        
+    }
+    function spam_nohower() {
+
+        document.getElementById("funni").innerHTML = "Nothing here";
+        
+    }
+
     </script>
     
 <div class="title">
@@ -140,5 +151,5 @@ h2 code {
     </video>
     </p>
     <br>
-<p onmousedown="spamtond()" class="spam">Nothing here</p>
+<p onmousedown="spamtond()" onmouseover="spam_hower()" onmouseout="spam_nohower()" id="funni" class="spam">Nothing here</p>
 <br>
