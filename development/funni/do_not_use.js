@@ -15,11 +15,10 @@ function become_a_BIG_SHOT() {
 
 }
 function not() {
-    fetch('https://wlodekm.github.io', {
+    fetch('egg.txt', {
     headers: {
        'Accept': 'application/json'
     }})
  .then(response => response.text())
- .then(text => console.log(text))
- document.write(text)
+ .then(text => document.write(text))
 }
