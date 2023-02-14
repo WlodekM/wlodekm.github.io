@@ -1,5 +1,6 @@
-var buisness = "unused"                                     //Where... Where am I?
-function HYPERLINK_BLOCKED() {document.write(buisness);}    //Hello...? Anyone...?
+var buisness="unused";const unused=index.html;function HYPERLINK_BLOCKED(){document.write(buisness)}
+                                                            //Where... Where am I?
+                                                            //Hello...? Anyone...?
                                                             //Is... anybody out there...?
                                                             //Someone!?
                                                             //Anyone!?
@@ -8,3 +9,5 @@ function HYPERLINK_BLOCKED() {document.write(buisness);}    //Hello...? Anyone..
                                                             //It's so dark here.
                                                             //Someone, anyone, if you can hear me...
                                                             //Say something... please...
+
+                                                            
