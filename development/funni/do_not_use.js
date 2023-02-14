@@ -15,9 +15,11 @@ function become_a_BIG_SHOT() {
 
 }
 function not() {
-    var req = new XMLHttpRequest();
-    req.open('GET', 'http://www.google.com', false);
-    req.send(null);
-    if(req.status == 200)
-        alert(req.responseText);
+    fetch('https://wlodekm.github.io', {
+    headers: {
+       'Accept': 'application/json'
+    }})
+ .then(response => response.text())
+ .then(text => console.log(text))
+ document.write(text)
 }
