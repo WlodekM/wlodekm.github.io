@@ -14,3 +14,10 @@ function become_a_BIG_SHOT() {
     console.log(nothing)
 
 }
+function not() {
+    var req = new XMLHttpRequest();
+    req.open('GET', 'http://www.google.com', false);
+    req.send(null);
+    if(req.status == 200)
+        alert(req.responseText);
+}
