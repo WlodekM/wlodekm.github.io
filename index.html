@@ -1,92 +1,91 @@
-<html lang="en-US"><head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>WlodekM.github.io</title>
-<meta name="generator" content="Jekyll v3.9.3">
-<meta property="og:title" content="Meower-themes">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="Themes for meower">
-<meta property="og:description" content="Themes for meower">
-<link rel="canonical" href="https://wlodekm.github.io/Meower-themes/">
-<meta property="og:url" content="https://wlodekm.github.io/Meower-themes/">
-<meta property="og:site_name" content="Meower-themes">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Meower-themes">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"Themes for meower","headline":"Meower-themes","name":"Meower-themes","url":"https://wlodekm.github.io/Meower-themes/"}</script>
-<!-- End Jekyll SEO tag -->
-
-    <style class="anchorjs"></style><link rel="stylesheet" href="/Meower-themes/assets/css/style.css?v=e8ce9b45a54984116ad763de70adf4d0a2245a97">
-    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
-
-<!-- Setup Google Analytics -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>WlodekM's website</title>
 <style>
-body {
-    font-size: 16px;
-    line-height: 1.5;
-    word-wrap: break-word;
-}
-blockquote {
-    padding: 0 1em;
-    color: #8b949e !important;
-    border-left: .25em solid #30363d !important;
-    background-color: var(--bg) !important;
-}
-blockquote {
-    margin: 0;
-}
-blockquote {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-end: 40px;
-}
 body{
---font: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
---bg: #141414;
---fg: #c9d1d9;
---color-border-muted:#21262d;
+/* vars */
+--BORDER: #31343a;
+--BG: #1d2027;
+--FG: #25282e;
+--FONT: monospace;
+--FONT-COLOR: #fff;
 }
-a{color: #58a6ff;text-decoration: none;}
-body{background-color: var(--bg);font-family: var(--font);}
-p{color:var(--fg)}
-h1{color:var(--fg);border-bottom: 1px solid var(--color-border-muted)!IMPORTANT;}
-h2{color:var(--fg);border-bottom: 1px solid var(--color-border-muted)!IMPORTANT;}
-h3{color:var(--fg);border-bottom: 1px solid var(--color-border-muted)!IMPORTANT;}
-h4{color:var(--fg);border-bottom: 1px solid var(--color-border-muted)!IMPORTANT;}
-h5{color:var(--fg)}
-h6{color:var(--fg)}
-/*.newblockquote {background-color: rgba(255, 255, 255, 0.1);border-left: 5px solid  rgba(255, 255, 255, 0.288); padding-left: 5px; margin-bottom: 5px;padding-right: 7.5px;}*/
-::-webkit-scrollbar{width:15px}::-webkit-scrollbar-track{border-radius:5px;background:#3f3f3f}::-webkit-scrollbar-thumb{background:#707070;border-radius:5px}
-.mono{font-family:monospace;}
+.topnav{
+   --margin: 20px;
+   padding-left:var(--margin);padding-top:var(--margin);padding-right:var(--margin);padding-bottom:var(--margin);
+   background-color: #111216;
+}
+.spacer{flex: 1 auto;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+.topnav h2 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.content{
+   --margin: 20px;
+   margin-left:var(--margin);margin-top:var(--margin);margin-right:var(--margin);margin-bottom:var(--margin);
+   padding: var(--margin);
+   font-family: var(--FONT);
+   background-color: var(--FG);
+   min-height: 91.2vh;
+   border-color: var(--BORDER);
+   border-width: 2px;
+   border-style: solid;
+   border-radius: var(--margin);
+}
+.image{
+   --margin: 20px;
+   margin-top:var(--margin);margin-bottom:var(--margin);
+   padding: var(--margin);
+   font-family: var(--FONT);
+   background-color: var(--FG);
+   min-height: 90.5%;
+   max-width: fit-content;
+   border-color: var(--BORDER);
+   border-width: 2px;
+   border-style: solid;
+   border-radius: var(--margin);
+}
+.content p{
+   color:var(--FONT-COLOR);
+   font-size: 125%;
+}
+.content h1{
+   color:var(--FONT-COLOR);
+   font-size: 175%;
+   font-weight: 550;
+}
+.content h3{
+   color:var(--FONT-COLOR);
+   font-size: 130%;
+   font-weight: 535;
+}
+body{background-color: var(--BG);}
 </style>
-
-
-<!-- You can set your favicon here -->
-<!-- link rel="shortcut icon" type="image/x-icon" href="/Meower-themes/favicon.ico" -->
-
-<!-- end custom head snippets -->
-
-  <script>(function(){class RuffleMimeType{constructor(a,b,c){this.type=a,this.description=b,this.suffixes=c}}class RuffleMimeTypeArray{constructor(a){this.__mimetypes=[],this.__named_mimetypes={};for(let b of a)this.install(b)}install(a){let b=this.__mimetypes.length;this.__mimetypes.push(a),this.__named_mimetypes[a.type]=a,this[a.type]=a,this[b]=a}item(a){return this.__mimetypes[a]}namedItem(a){return this.__named_mimetypes[a]}get length(){return this.__mimetypes.length}}class RufflePlugin extends RuffleMimeTypeArray{constructor(a,b,c,d){super(d),this.name=a,this.description=b,this.filename=c}install(a){a.enabledPlugin||(a.enabledPlugin=this),super.install(a)}}class RufflePluginArray{[Symbol.iterator](){return this.__plugins[Symbol.iterator]()}constructor(a){this.__plugins=[],this.__named_plugins={};for(let b of a)this.install(b)}install(a){let b=this.__plugins.length;this.__plugins.push(a),this.__named_plugins[a.name]=a,this[a.name]=a,this[b]=a}item(a){return this.__plugins[a]}namedItem(a){return this.__named_plugins[a]}refresh(){}get length(){return this.__plugins.length}}const FLASH_PLUGIN=new RufflePlugin("Shockwave Flash","Shockwave Flash 32.0 r0","ruffle.js",[new RuffleMimeType("application/futuresplash","Shockwave Flash","spl"),new RuffleMimeType("application/x-shockwave-flash","Shockwave Flash","swf"),new RuffleMimeType("application/x-shockwave-flash2-preview","Shockwave Flash","swf"),new RuffleMimeType("application/vnd.adobe.flash.movie","Shockwave Flash","swf")]);function install_plugin(a){navigator.plugins.install||Object.defineProperty(navigator,"plugins",{value:new RufflePluginArray(navigator.plugins),writable:!1}),navigator.plugins.install(a),0<a.length&&!navigator.mimeTypes.install&&Object.defineProperty(navigator,"mimeTypes",{value:new RuffleMimeTypeArray(navigator.mimeTypes),writable:!1});for(var b=0;b<a.length;b+=1)navigator.mimeTypes.install(a[b])}install_plugin(FLASH_PLUGIN);})();</script><script src="chrome-extension://donbcfbmhbcapadipfkeojnmajbakjdc/dist/ruffle.js?id=80348051467"></script></head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-
-<blockquote>  
-<h2 id="how-do-i-load-the-theme">𝚆𝚕𝚘𝚍𝚎𝚔𝚖.𝚐𝚒𝚝𝚑𝚞𝚋.𝚒𝚘<a class="anchorjs-link " href="#how-do-i-load-the-theme" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em / 1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-  <p>The website of WlodekM</p><br>
-  <a href="/development/">/development/</a><br>
-  <a href="/videos2/"    >/videos/</a><br>
-  <a href="/files/"      >/files/</a><br>
-  <a href="/img/"        >/img/</a><br>
-  
-</blockquote>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-</div></body>
+<div class="topnav">
+   <div class="spacer"></div>
+   <ul>
+   <a href="#"><img src="https://wlodekm.github.io/icons/DS-ICO.svg"></a>
+   <a href="#"><img src="https://wlodekm.github.io/icons/text.gif"></a>
+   <a href="#"><img src="https://wlodekm.github.io/icons/video.png"></a>
+   </ul>
+ </div>
+</head>
+<body>
+   
+   <div class="content">
+      <h1><hj>wlodekm.github.io</hj></h1>
+      <br>
+      <h3>WlodekM</h3>
+      <p>Тут типу буде написано що я уераїнець і програміст<br>
+         Тут буде написано що я знаю (мови програ)
+      </p>
+      <div class="image">
+         <img src="https://wlodekm.github.io/icons/text.gif">
+      </div>
+</body>
 </html>
