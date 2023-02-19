@@ -25,6 +25,7 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
+.topnav a img{size: 3px;}
 .content{
    --margin: 20px;
    margin-left:var(--margin);margin-top:var(--margin);margin-right:var(--margin);margin-bottom:var(--margin);
@@ -37,9 +38,10 @@ body{
    border-style: solid;
    border-radius: var(--margin);
 }
-.image{
+.quote{
    --margin: 20px;
-   margin-top:var(--margin);margin-bottom:var(--margin);
+   margin-top:var(--margin);
+   margin-bottom:var(--margin);
    padding: var(--margin);
    font-family: var(--FONT);
    background-color: var(--FG);
@@ -61,31 +63,54 @@ body{
 }
 .content h3{
    color:var(--FONT-COLOR);
-   font-size: 130%;
+   font-size: 155%;
    font-weight: 535;
 }
+.right {align-items: self-end;}
 body{background-color: var(--BG);}
+ul{color: var(--FONT-COLOR);}
+.topnav{position: relative;bottom: 00px;}
+.logo {position: absolute;top: 36%; text-decoration: none; color:#f0f0f0;font-size: 200%;font-family: monospace;font-weight: 600;}
 </style>
 <div class="topnav">
-   <div class="spacer"></div>
-   <ul>
+   <a href="#" class="logo">WlodekM</a>
+   <div class="spacer" align="right"><!--align="" is so old vscode thinks it doesn't exist-->
+   <a href="#"><img src="https://wlodekm.github.io/icons/GH-ICO.svg"></a>
    <a href="#"><img src="https://wlodekm.github.io/icons/DS-ICO.svg"></a>
-   <a href="#"><img src="https://wlodekm.github.io/icons/text.gif"></a>
-   <a href="#"><img src="https://wlodekm.github.io/icons/video.png"></a>
-   </ul>
- </div>
+   <a href="#"><img src="https://wlodekm.github.io/icons/TG-ICO.svg"></a>
+ </div></div>
 </head>
 <body>
-   
+
    <div class="content">
       <h1><hj>wlodekm.github.io</hj></h1>
       <br>
       <h3>WlodekM</h3>
-      <p>Тут типу буде написано що я уераїнець і програміст<br>
-         Тут буде написано що я знаю (мови програ)
-      </p>
-      <div class="image">
-         <img src="https://wlodekm.github.io/icons/text.gif">
+      <p>Hi, my name is WlodekM<br>
+         I'm an ukranian game developer<br>
+         I know:
+         </p><ul>
+            <li><p>
+                  Javascript
+            </p></li>
+            <li><p>
+                  Python
+            </p></li>
+         </ul><p>
+         I'm currentlly working on:
+      </p><ul>
+         <li><p>
+               Supra cow 2
+         </p></li>
+         <li><p>
+               This website
+         </p></li>
+      </ul><p>
+      <!--
+      <div class="quote">
+      <img src="https://wlodekm.github.io/icons/text.gif">
       </div>
+      -->
+      </p>
 </body>
 </html>
