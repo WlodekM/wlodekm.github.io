@@ -66,17 +66,32 @@ body{
    font-size: 155%;
    font-weight: 535;
 }
+.content2 p{color:var(--FONT-COLOR);font-size: 125%;}
+.content2 h1{color:var(--FONT-COLOR);font-size: 175%;font-weight: 550;}
+.content2 h3{color:var(--FONT-COLOR);font-size: 155%;font-weight: 535;}
+.content2{
+   --margin: 20px;
+   margin-left:var(--margin);margin-top:var(--margin);margin-right:var(--margin);margin-bottom:var(--margin);
+   padding: var(--margin);
+   font-family: var(--FONT);
+   background-color: var(--FG);
+   border-color: var(--BORDER);
+   border-width: 2px;
+   border-style: solid;
+   border-radius: var(--margin);
+}
 .right {align-items: self-end;}
 body{background-color: var(--BG);}
 ul{color: var(--FONT-COLOR);}
 .topnav{position: relative;bottom: 00px;}
 .logo {position: absolute;top: 36%; text-decoration: none; color:#f0f0f0;font-size: 200%;font-family: monospace;font-weight: 600;}
+a{text-decoration: none;}
 </style>
 <div class="topnav">
    <a href="#" class="logo">WlodekM</a>
    <div class="spacer" align="right"><!--align="" is so old vscode thinks it doesn't exist-->
-   <a href="#"><img src="https://wlodekm.github.io/icons/GH-ICO.svg"></a>
-   <a href="#"><img src="https://wlodekm.github.io/icons/DS-ICO.svg"></a>
+   <a href="https://github.com/WlodekM"><img src="https://wlodekm.github.io/icons/GH-ICO.svg"></a>
+   <a href="https://discordapp.com/users/750565290009559112"><img src="https://wlodekm.github.io/icons/DS-ICO.svg"></a>
    <a href="#"><img src="https://wlodekm.github.io/icons/TG-ICO.svg"></a>
  </div></div>
 </head>
@@ -112,5 +127,19 @@ ul{color: var(--FONT-COLOR);}
       </div>
       -->
       </p>
+   </div>
+
+   <div class="content2">
+      <h1><hj>Links</hj></h1>
+      <br>
+      <ul>
+         <li>
+            <a href="/development/">
+               /development/
+            </a>
+         </li>
+      </ul>
+      </p>
+   </div>
 </body>
 </html>
