@@ -1360,7 +1360,7 @@ D.p(["https://wlodekm.github.io/videos2/sc2/2023/01/31*0*1676646413","inde.html*
 								/*console.log(file_tmp) //1.5*/
 								console.log(`ERROR HERE: ${linkProtocol}, ${linkRoot}, ${dir_tmp}, ${sTmp[0]}`) //1.75
 
-							file_tmp = linkProtocol + linkRoot + sTmp[0] + "\">"; //Problem here
+							file_tmp = /*linkProtocol +  linkRoot +*/ dir_tmp + sTmp[0] + "\">"; //Problem here
 
 							if( file_tmp.substr(0,1) === "/" ) file_tmp = file_tmp.substr(1);
 							file_tmp = file_tmp.replace(/\\/g,"/");
