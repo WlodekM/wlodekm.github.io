@@ -6,6 +6,7 @@
 body{
 /* vars */
 --BORDER: rgba(250, 250, 250, 0.075);
+--BORDERHOVER: rgba(250, 250, 250, 0.175);
 --BG: #332a41;
 --FG: rgba(250, 250, 250, 0.075);
 --FONT: monospace;
@@ -95,6 +96,7 @@ div.gallery {
   float: left;
   height: 360px;
   width: 350px;
+  transition: border-color 0.5s;
 }
 
 div.gallery img {
@@ -102,14 +104,15 @@ div.gallery img {
   height: 100%;
   height: 280px;
   object-fit:cover;
-  border-bottom: 2px solid var(--BORDER);
   width: 350px;
-  border-radius: 6.5px;
+  border-radius: 6.5px 6.5px 0px 0px;
 }
-
-div.desc {
+div.gallery:hover{border-color: var(--BORDERHOVER);}
+.desc {
   text-align: center;
   color: var(--FONT-COLOR);
+  position: relative;
+  top: calc(40px - (1em) );
 }
 .content2 a {color:rgb(0, 204, 255)}
 </style>
@@ -152,21 +155,30 @@ div.desc {
 
          <h1><hj>My games</hj></h1>
 
-         <div class="gallery">
+         <a href="#" target="_blank">
+            <div class="gallery">
             <img src="https://wlodekm.github.io/icons/rpg.png" width="600" height="400">
-            <div class="desc">Untitled rpg game</div>
-         </div>
+            <div class="desc" style="vertical-align: middle">Untitled rpg game</div>
+         </div></a>
 
-         <div class="gallery">
+         <a href="https://scratch.mit.edu/projects/726390454/" target="_blank">
+            <div class="gallery">
             <img src="https://wlodekm.github.io/icons/s2.png" width="600" height="400">
-            <div class="desc">Spikes 2</div>
-         </div>
+            <div class="desc" style="vertical-align: middle">Spikes 2</div>
+         </div></a>
+
+         <a href="https://scratch.mit.edu/projects/717436838/" target="_blank">
+            <div class="gallery">
+            <img src="https://wlodekm.github.io/icons/CG.png" width="600" height="400">
+            <div class="desc" style="vertical-align: middle">Cool game</div>
+         </div></a>
 
      </div></div>
       <!--
       <div class="quote">
       <img src="https://wlodekm.github.io/icons/text.gif">
       </div>
+      1
       -->
       </p>
    </div>
