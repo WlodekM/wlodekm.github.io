@@ -11,6 +11,9 @@ body{
 --FG: rgba(250, 250, 250, 0.075);
 --FONT: monospace;
 --FONT-COLOR: #fff;
+  --width:calc((100vw - (57 * 2)) / 4);
+  --height:calc(var(--width) / 1.02857142857);
+  --imgh:calc(var(--height) / 1.25);
 }
 .topnav{
    --margin: 20px;
@@ -90,22 +93,21 @@ a{text-decoration: none;}
 body{margin:0 0 0 0 !important;}
 
 div.gallery {
-
-   margin: 15px;
+  margin: 15px;
   border: 2px solid var(--BORDER);
   border-radius: 7.5px;
   float: left;
-  height: 360px;
-  width: 350px;
+  height: var(--height);/*360px*/
+  width: var(--width);
   transition: border-color 0.5s;
 }
 /*.gamesgallery{text-align: center;align-content: center;position: relative;left: 6%;}*/
 div.gallery img {
   width: auto;
   height: 100%;
-  height: 280px;
+  height: var(--imgh);
   object-fit:cover;
-  width: 350px;
+  width: var(--width)px;
   border-radius: 6.5px 6.5px 0px 0px;
 }
 div.gallery:hover{border-color: var(--BORDERHOVER);}
@@ -121,6 +123,7 @@ div.gallery:hover{border-color: var(--BORDERHOVER);}
   margin: 3px 3px 3px 3px;}
 .topnav img:hover{filter:brightness(1);}
 .content2 a {color:rgb(0, 204, 255)}
+.gamesgallery{padding-left:24px;}
 </style>
 <div class="topnav">
    <a href="" class="logo">WlodekM</a>
