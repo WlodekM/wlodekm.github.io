@@ -105,9 +105,9 @@ div.gallery {
 div.gallery img {
   width: auto;
   height: 100%;
-  height: var(--imgh);
+  height: calc(var(--height) / 1.25);
   object-fit:cover;
-  width: var(--width)px;
+  width: var(--width);
   border-radius: 6.5px 6.5px 0px 0px;
 }
 div.gallery:hover{border-color: var(--BORDERHOVER);}
