@@ -93,21 +93,19 @@ a{text-decoration: none;}
 body{margin:0 0 0 0 !important;}
 
 div.gallery {
-  margin: 15px;
+  margin: 15px 15px 15px -1px;
   border: 2px solid var(--BORDER);
   border-radius: 7.5px;
   float: left;
-  height: var(--height);/*360px*/
-  width: var(--width);
+  height: 35vh;/*360px*/
+  width: 100%;
   transition: border-color 0.5s;
 }
 /*.gamesgallery{text-align: center;align-content: center;position: relative;left: 6%;}*/
 div.gallery img {
-  width: auto;
-  height: 100%;
-  height: calc(var(--height) / 1.25);
+  height: 75%;
   object-fit:cover;
-  width: var(--width);
+  width: 100%;
   border-radius: 6.5px 6.5px 0px 0px;
 }
 div.gallery:hover{border-color: var(--BORDERHOVER);}
@@ -116,14 +114,32 @@ div.gallery:hover{border-color: var(--BORDERHOVER);}
   text-align: center;
   color: var(--FONT-COLOR);
   position: relative;
-  top: calc(40px - (1em) );
+  top: calc(25% - (4em) );
 }
 .topnav{position: sticky;height: 5vh;}
 .topnav img {transition: filter 0.25s; filter:brightness(0.635) ;
   margin: 3px 3px 3px 3px;}
 .topnav img:hover{filter:brightness(1);}
 .content2 a {color:rgb(0, 204, 255)}
-.gamesgallery{padding-left:24px;}
+.row{padding:24px;}
+/* Container for flexboxes */
+.row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Create three unequal columns that sits next to each other */
+.column {
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+   -webkit-flex: 1;
+   -ms-flex: 1;
+   flex: 1;
+}
 </style>
 <div class="topnav">
    <a href="" class="logo">WlodekM</a>
@@ -151,7 +167,7 @@ div.gallery:hover{border-color: var(--BORDERHOVER);}
       <div class="games">
 
          <h1><hj>My games</hj></h1>
-      <div class="gamesgallery">
+      <!--<div class="gamesgallery">
          <a href="#" target="_blank">
             <div class="gallery">
             <img src="https://wlodekm.github.io/icons/rpg.png" width="600" height="400">
@@ -169,13 +185,43 @@ div.gallery:hover{border-color: var(--BORDERHOVER);}
             <img src="https://wlodekm.github.io/icons/CG.png" width="600" height="400">
             <div class="desc" style="vertical-align: middle">Cool game</div>
          </div></a>
+      </div>-->
+      <div class="row">
+         <div class="column side" >
+            <a href="https://scratch.mit.edu/projects/726390454/" target="_blank">
+               <div class="gallery">
+               <img src="https://wlodekm.github.io/icons/s2.png" width="600" height="400">
+               <div class="desc" style="vertical-align: middle">Spikes 2</div>
+            </div></a>
+         </div>
 
-         <a href="https://scratch.mit.edu/projects/639049996/" target="_blank">
+         <div class="column side" >
+         <a href="https://scratch.mit.edu/projects/717436838/" target="_blank">
             <div class="gallery">
-            <img src="https://wlodekm.github.io/icons/EG.png" width="600" height="400">
-            <div class="desc" style="vertical-align: middle">Earth game</div>
+            <img src="https://wlodekm.github.io/icons/CG.png" width="600" height="400">
+            <div class="desc" style="vertical-align: middle">Cool game</div>
          </div></a>
+
       </div>
+
+         <div class="column side" >
+            <a href="#" target="_blank">
+               <div class="gallery">
+               <img src="https://wlodekm.github.io/icons/rpg.png" width="600" height="400">
+               <div class="desc" style="vertical-align: middle">Untitled rpg game</div>
+            </div></a>
+         </div>
+
+         <div class="column side" >
+            <a href="https://scratch.mit.edu/projects/639049996/" target="_blank">
+               <div class="gallery">
+                 
+                 <img src="https://wlodekm.github.io/icons/EG.png" width="600" height="400">
+                 <div class="desc" style="vertical-align: middle">Earth game</div>
+               </div></a>
+            </div>
+       </div>
+
 
      </div></div>
       <!--
