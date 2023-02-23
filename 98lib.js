@@ -71,11 +71,11 @@ function dragElement(elmnt) {
   }
   console.log("│  Folding  loaded  │");
   console.log("│                   │");
-/*timeElem = getElementById('localtime')
-var timer = new Date();
-timeElem.innerHTML = timer.toLocaleTimeString('en-US');
+var today = new Date();
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+getElementById('localtime').innerHTML = time
   console.log("│    Time loaded    │");
   console.log("│                   │");
-  console.log("│                   │");*/
+  console.log("│                   │");
   console.log("│        End        │");
   console.log("┕━━━━━━━━━━━━━━━━━━━┙");
