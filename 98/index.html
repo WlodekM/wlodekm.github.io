@@ -2,6 +2,7 @@
     <title>98.css example</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://jdan.github.io/98.css/98.css">
+    <link rel="stylesheet" href="https://wlodekm.github.io/98/startbar.css">
   </head>
   <style>
   body{background-color: teal;}
@@ -25,15 +26,15 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
   </style>
 
 <div class="window" style="width: 300px" id="window1">
-  <div class="title-bar" id="window2header">
+  <div class="title-bar" id="window1header">
     <div class="title-bar-text">Resizable window</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
       <button aria-label="Maximize"></button>
-      <button onclick="closewindow('window2')" aria-label="Close"></button>
+      <button onclick="closewindow('window1')" aria-label="Close"></button>
     </div>
   </div>
-  <div class="window-body">
+  <div class="window-body" id="window1content">
     <div class="field-row-stacked" style="width: 200px">
       <label for="text20">Additional notes</label>
       <textarea id="text20" rows="8" style="resize:vertical;width: 141.5%;"></textarea>
@@ -42,7 +43,7 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
 </div>
 
 <div class="window" style="width: 300px" id="window2">
-  <div class="title-bar" id="window1header">
+  <div class="title-bar" id="window2header">
     <div class="title-bar-text">A Window With Stuff In It</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
@@ -50,7 +51,7 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
       <button onclick="closewindow('window1')" aria-label="Close"></button>
     </div>
   </div>
-  <div class="window-body">
+  <div class="window-body" id="window2content">
     <p>There's so much room for activities!</p>
     <br>
     <section class="field-row" style="justify-content: flex-end">
@@ -67,7 +68,7 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
         <button aria-label="Close"onclick="closewindow('window3')" ></button>
       </div>
     </div>
-    <div class="window-body">
+    <div class="window-body" id="window3content">
       <p>This is a test of 98.css!</p>
       <br>
       <section class="field-row" style="justify-content: flex-end">
@@ -85,7 +86,7 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
         <button onclick="closewindow('window4')" aria-label="Close"></button>
       </div>
     </div>
-    <div class="window-body">
+    <div class="window-body" id="window4content">
       <div class="field-row-stacked" style="width: 200px">
         <label for="text22">Email</label>
         <input id="text22" type="email" value="admin@contoso.com"/>
@@ -108,7 +109,7 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
         <button onclick="closewindow('window5')" aria-label="Close"></button>
       </div>
     </div>
-    <div class="window-body">
+    <div class="window-body" id="window5content">
       <fieldset>
       <p>Today's mood</p>
       <br>
