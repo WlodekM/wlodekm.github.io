@@ -1,4 +1,8 @@
 
+console.log("┍━━━━━━━━━━━━━━━━━━━┑");
+console.log("│ 98LIB.js  started │");
+console.log("│      loading      │");
+console.log("│                   │");
 function dragElement(elmnt) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     if (document.getElementById(elmnt.id + "header")) {
@@ -39,14 +43,21 @@ function dragElement(elmnt) {
       document.onmousemove = null;
     }
   }
+  console.log("│drag Element loaded│");
+  console.log("│                   │");
+
   function closewindow(tid){
     var windowelem = document.getElementById(tid)
     windowelem.remove()
   }
+  console.log("│  Closing  loaded  │");
+  console.log("│                   │");
   function resizableElement(tid){
     tid.style.resize="both"
     tid.style.overflow="auto"
   }
+  console.log("│   Resize loaded   │");
+  console.log("│                   │");
   function foldElement(tid){
     let btn = document.getElementById(tid+'content');
     if (btn) {
@@ -58,9 +69,11 @@ function dragElement(elmnt) {
         }
     }
   }
+  console.log("│  Folding  loaded  │");
+  console.log("│                   │");
 timeElem = getElementById('localtime')
 var timer = new Date();
 timeElem.innerHTML = timer.toLocaleTimeString('en-US');
-console.log("┍━━━━━━━━━━━━━━━━━━┑");
-console.log("│ 98LIB.js loaded! │");
-console.log("┕━━━━━━━━━━━━━━━━━━┙");
+  console.log("│    Time loaded    │");
+  console.log("│                   │");
+  console.log("┕━━━━━━━━━━━━━━━━━━━┙");
