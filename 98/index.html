@@ -18,7 +18,7 @@
 
 <div class="window" style="width: 300px" id="window2">
   <div class="title-bar" id="window2header">
-    <div class="title-bar-text">A Window With Stuff In It</div>
+    <div class="title-bar-text">Resizable window</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
       <button aria-label="Maximize"></button>
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="window-body">
-    <p>There's so much room for activities!</p>
+    <p>You can resize this window</p>
   </div>
 </div>
 
@@ -68,6 +68,7 @@
   </div>
 
 <script>
+resizableElement(document.getElementById("window2"));
 dragElement(document.getElementById("window1"));
 dragElement(document.getElementById("window2"));
 
@@ -115,8 +116,8 @@ function closewindow(tid){
   var windowelem = document.getElementById(tid)
   windowelem.remove()
 }
-function resizable(tid){
+function resizableElement(tid){
   tid.style.resize="both"
-  tid.style.overflow="auto;"
+  tid.style.overflow="auto"
 }
 </script>
