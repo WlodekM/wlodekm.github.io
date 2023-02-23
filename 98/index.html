@@ -2,7 +2,7 @@
     <title>98.css example</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
-    <link rel="stylesheet" href="https://wlodekm.github.io/98/startbar.css">"
+    <link rel="stylesheet" href="https://wlodekm.github.io/98/startbar.css">
   </head>
   <style>
   body{background-color: teal;}
@@ -11,9 +11,9 @@
   position: absolute;
 }
 #window3{left:330px}
-#window2{top:125px;}
-#window4{top:125px;left:330px}
-#window5{top:320px;left:000px}
+#window2{top:185px;}
+#window4{top:110px;left:330px}
+#window5{top:300px;left:000px}
 .window .title-bar {
   cursor: move;
 }
@@ -23,7 +23,7 @@ label {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 an
 button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
   </style>
 
-<div class="window" style="width: 300px" id="window2">
+<div class="window" style="width: 300px" id="window1">
   <div class="title-bar" id="window2header">
     <div class="title-bar-text">Resizable window</div>
     <div class="title-bar-controls">
@@ -40,7 +40,7 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
   </div>
 </div>
 
-<div class="window" style="width: 300px" id="window1">
+<div class="window" style="width: 300px" id="window2">
   <div class="title-bar" id="window1header">
     <div class="title-bar-text">A Window With Stuff In It</div>
     <div class="title-bar-controls">
@@ -140,4 +140,16 @@ dragElement(document.getElementById("window2"));
 dragElement(document.getElementById("window3"));
 dragElement(document.getElementById("window4"));
 </script>
-<div class
+
+<div class="startBar">
+	<section class="field-row">
+		<button class="start" style="width: 4px;"><b>Start</b></button>
+		<section class="content">
+			<div class="formatDiv"><button class="format">Random Program</button></div>
+		</section>
+		
+ 		<span class="time">
+			<span>11:23 PM</span>
+		</span>
+	</section>
+</div>
