@@ -47,6 +47,17 @@ function dragElement(elmnt) {
     tid.style.resize="both"
     tid.style.overflow="auto"
   }
-console.log("================");
-console.log("98LIB.js loaded!");
-console.log("================");
+  function resizableElement(tid){
+    let btn = document.getElementById(tid);
+    if (btn) {
+        let disabled = btn.hasAttribute('disabled');
+        if (disabled) {
+          btn.setAttribute("disabled", "false");
+        } else {
+          btn.setAttribute("disabled", "true");
+        }
+    }
+  }
+console.log("┍━━━━━━━━━━━━━━━━━━┑");
+console.log("│ 98LIB.js loaded! │");
+console.log("┕━━━━━━━━━━━━━━━━━━┙");
