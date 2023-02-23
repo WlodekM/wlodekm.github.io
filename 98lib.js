@@ -48,13 +48,13 @@ function dragElement(elmnt) {
     tid.style.overflow="auto"
   }
   function foldElement(tid){
-    let btn = document.getElementById(tid);
+    let btn = document.getElementById(tid+'content');
     if (btn) {
         let disabled = btn.hasAttribute('disabled');
         if (disabled) {
-          btn.setAttribute("disabled", "false");
+          btn.removeAttribute("disabled");
         } else {
-          btn.setAttribute("disabled", "true");
+          btn.setAttribute("disabled", "");
         }
     }
   }
