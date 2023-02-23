@@ -50,11 +50,11 @@ function dragElement(elmnt) {
   function foldElement(tid){
     let btn = document.getElementById(tid+'content');
     if (btn) {
-        let disabled = btn.hasAttribute('disabled');
+        let disabled = btn.hasAttribute('hidden');
         if (disabled) {
-          btn.removeAttribute("disabled");
+          btn.removeAttribute("hidden");
         } else {
-          btn.setAttribute("disabled", "");
+          btn.setAttribute("hidden", "");
         }
     }
   }
