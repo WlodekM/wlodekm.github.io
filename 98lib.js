@@ -47,4 +47,6 @@ function dragElement(elmnt) {
     tid.style.resize="both"
     tid.style.overflow="auto"
   }
-  
+console.log("================");
+console.log("98LIB.js loaded!");
+console.log("================");
