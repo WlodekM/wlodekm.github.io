@@ -58,6 +58,9 @@ function dragElement(elmnt) {
         }
     }
   }
+timeElem = getElementById('localtime')
+var timer = new Date();
+timeElem.innerHTML = timer.toLocaleTimeString('en-US');
 console.log("┍━━━━━━━━━━━━━━━━━━┑");
 console.log("│ 98LIB.js loaded! │");
 console.log("┕━━━━━━━━━━━━━━━━━━┙");

@@ -19,5 +19,4 @@ function httpGet(theUrl)
     xmlhttp.send();    
 }
 function openwindow(){
-    console.log(httpGet('hhps://wlodekm.github.io/98/program.txt'))
 }
