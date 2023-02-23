@@ -14,6 +14,11 @@
 .window .title-bar {
   cursor: move;
 }
+body {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
   </style>
 
 <div class="window" style="width: 300px" id="window2">
@@ -53,8 +58,6 @@
     <div class="title-bar" id="window3header">
       <div class="title-bar-text">Alert!</div>
       <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
         <button aria-label="Close"onclick="closewindow('window3')" ></button>
       </div>
     </div>
@@ -121,4 +124,5 @@ function resizableElement(tid){
   tid.style.resize="both"
   tid.style.overflow="auto"
 }
+
 </script>
