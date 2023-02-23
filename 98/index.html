@@ -2,6 +2,7 @@
     <title>98.css example</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="https://unpkg.com/98.css" />
+    <link rel="stylesheet" href="https://wlodekm.github.io/98/startbar.css">"
   </head>
   <style>
   body{background-color: teal;}
@@ -10,15 +11,16 @@
   position: absolute;
 }
 #window3{left:330px}
-#window2{top:115px;}
+#window2{top:125px;}
+#window4{top:125px;left:330px}
+#window5{top:320px;left:000px}
 .window .title-bar {
   cursor: move;
 }
-body {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
-}
+p {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
+.title-bar {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
+label {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
+button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
   </style>
 
 <div class="window" style="width: 300px" id="window2">
@@ -31,7 +33,10 @@ body {
     </div>
   </div>
   <div class="window-body">
-    <p>You can resize this window</p>
+    <div class="field-row-stacked" style="width: 200px">
+      <label for="text20">Additional notes</label>
+      <textarea id="text20" rows="8" style="resize:vertical;width: 141.5%;"></textarea>
+    </div>
   </div>
 </div>
 
@@ -70,11 +75,69 @@ body {
     </div>
   </div>
 
+  <div class="window" style="width: 300px" id="window4">
+    <div class="title-bar" id="window4header">
+      <div class="title-bar-text">Sign up</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"disabled ></button>
+        <button aria-label="Maximize"disabled ></button>
+        <button onclick="closewindow('window4')" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <div class="field-row-stacked" style="width: 200px">
+        <label for="text22">Email</label>
+        <input id="text22" type="email" value="admin@contoso.com"/>
+      </div>
+      <div class="field-row-stacked" style="width: 200px">
+        <label for="text23">Password</label>
+        <input id="text23" type="password" value="hunter2"/>
+      </div>
+      <br>
+      <button>Sign up</button>
+    </div>
+  </div>
+
+  <div class="window" style="width: 300px" id="window5">
+    <div class="title-bar" id="window5header">
+      <div class="title-bar-text">Checkboxes</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"disabled ></button>
+        <button aria-label="Maximize"disabled ></button>
+        <button onclick="closewindow('window5')" aria-label="Close"></button>
+      </div>
+    </div>
+    <div class="window-body">
+      <fieldset>
+      <p>Today's mood</p>
+      <br>
+      <div class="field-row">
+        <input id="radio13" type="radio" name="fieldset-example2">
+        <label for="radio13">Claire Saffitz</label>
+      </div>
+      <div class="field-row">
+        <input id="radio14" type="radio" name="fieldset-example2">
+        <label for="radio14">Brad Leone</label>
+      </div>
+      <div class="field-row">
+        <input id="radio15" type="radio" name="fieldset-example2">
+        <label for="radio15">Chris Morocco</label>
+      </div>
+      <div class="field-row">
+        <input id="radio16" type="radio" name="fieldset-example2">
+        <label for="radio16">Carla Lalli Music</label>
+      </div>
+    </fieldset>
+    </div>
+  </div>
+
 <script src="https://wlodekm.github.io/98lib.js"></script>
 <script>
 console.log("setting up windows...")
-resizableElement(document.getElementById("window2"));
+resizableElement(document.getElementById("window5"));
 dragElement(document.getElementById("window1"));
 dragElement(document.getElementById("window2"));
 dragElement(document.getElementById("window3"));
+dragElement(document.getElementById("window4"));
 </script>
+<div class

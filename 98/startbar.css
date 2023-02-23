@@ -1,0 +1,85 @@
+.startBar {
+    display:flex;
+    position:fixed;
+    height: 25px;
+    width: 100%;
+    overflow: hidden;
+    font-weight: bold!important;
+    padding: 2px;
+    box-shadow: inset 1px 0 #fff;
+    display: block;
+    background-color: silver;
+    bottom: 0%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #f4f4f4;
+    border-bottom: silver;
+    position: fixed;
+    user-select: none;
+}
+
+.start {
+    width: 45px;
+    height: 14px;
+    margin: 0;
+		margin-right: 3px;
+}
+
+.time {
+  display: flex;
+	width: 50px;
+	white-space: nowrap;
+	padding-left: 3px;
+	padding-right: 4px;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  vertical-align: middle;
+  height: 21px;
+  line-height: 21px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  font-weight: 400;
+  color: #000;
+  text-decoration: none;
+}
+
+.content {
+    display: flex;
+    width: calc(100% - 150px);
+}
+
+.format {
+    width: 115px;
+    margin: 0;
+    margin-left: 2px;
+    text-align: left;
+    vertical-align: middle;
+		/*padding: 2px 11px 0 6px;*/
+    
+    
+    white-space: nowrap;
+    overflow: hidden;
+    flex-basis: 110px;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.formatDiv {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-basis: 115px;
+    flex-shrink: 1;
+    min-width: 0;
+		margin-left: -2px;
+}
+
+.formatDiv1 {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    flex-basis: 115px;
+    flex-shrink: 1;
+    min-width: 0;
+		margin-left: -2px;
+}
