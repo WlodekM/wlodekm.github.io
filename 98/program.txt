@@ -1,0 +1,20 @@
+
+<div class="window" style="width: 300px" id="window6">
+  <div class="title-bar" id="window2header">
+    <div class="title-bar-text">Resizable window</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button onclick="closewindow('window2')" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    <div class="field-row-stacked" style="width: 200px">
+      <label for="text20">Additional notes</label>
+      <textarea id="text20" rows="8" style="resize:vertical;width: 141.5%;"></textarea>
+    </div>
+  </div>
+</div>
+<script>
+dragElement(document.getElementById("window6"));
+</script>
