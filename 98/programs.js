@@ -18,5 +18,3 @@ function httpGet(theUrl)
     xmlhttp.open("GET", theUrl, false );
     xmlhttp.send();    
 }
-function openwindow(){
-}
