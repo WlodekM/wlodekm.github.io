@@ -47,7 +47,7 @@ function dragElement(elmnt) {
     tid.style.resize="both"
     tid.style.overflow="auto"
   }
-  function resizableElement(tid){
+  function foldElement(tid){
     let btn = document.getElementById(tid);
     if (btn) {
         let disabled = btn.hasAttribute('disabled');
