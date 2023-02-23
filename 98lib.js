@@ -76,4 +76,6 @@ var timer = new Date();
 timeElem.innerHTML = timer.toLocaleTimeString('en-US');
   console.log("│    Time loaded    │");
   console.log("│                   │");
+  console.log("│                   │");
+  console.log("│        End        │");
   console.log("┕━━━━━━━━━━━━━━━━━━━┙");
