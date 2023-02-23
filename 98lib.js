@@ -73,8 +73,7 @@ function dragElement(elmnt) {
   console.log("│                   │");
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-var ltmr = document.getElementById('localtime')
-ltmr.innerHTML = time
+document.getElementById('localtime').innerHTML = time
   console.log("│    Time loaded    │");
   console.log("│                   │");
   console.log("│                   │");
