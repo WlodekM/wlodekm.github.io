@@ -1,20 +1,18 @@
-function httpGet(theUrl)
-{
-    if (window.XMLHttpRequest)
-    {// code for IE7+, Firefox, Chrome, Opera, Safari
-        xmlhttp=new XMLHttpRequest();
-    }
-    else
-    {// code for IE6, IE5
-        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-    }
-    xmlhttp.onreadystatechange=function()
-    {
-        if (xmlhttp.readyState==4 && xmlhttp.status==200)
-        {
-            return xmlhttp.responseText;
+fetch('https://wlodekm.github.io/98/program.txt')
+    .then(function (response) {
+        switch (response.status) {
+            // status "OK"
+            case 200:
+                return response.text();
+            // status "Not Found"
+            case 404:
+                throw response;
         }
-    }
-    xmlhttp.open("GET", theUrl, false );
-    xmlhttp.send();    
-}
+    })
+    .then(function (template) {
+        console.log(template);
+    })
+    .catch(function (response) {
+        // "Not Found"
+        console.log(response.statusText);
+    });
