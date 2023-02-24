@@ -1,0 +1,202 @@
+<head>
+    <title>Tabs</title>
+    <link
+  rel="stylesheet"
+  href="https://botoxparty.github.io/XP.css/98.css"
+>
+<style>
+    code{color:black}
+    body{background-color: teal;}
+</style>
+</head>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const tabList = document.querySelector('[role="tablist"]');
+  
+    // Add a click event handler to each tab
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", changeTabs);
+    });
+  
+    // Enable arrow navigation between tabs in the tab list
+    let tabFocus = 0;
+  
+    tabList.addEventListener("keydown", (e) => {
+      // Move right
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        tabs[tabFocus].setAttribute("tabindex", -1);
+        if (e.key === "ArrowRight") {
+          tabFocus++;
+          // If we're at the end, go to the start
+          if (tabFocus >= tabs.length) {
+            tabFocus = 0;
+          }
+          // Move left
+        } else if (e.key === "ArrowLeft") {
+          tabFocus--;
+          // If we're at the start, move to the end
+          if (tabFocus < 0) {
+            tabFocus = tabs.length - 1;
+          }
+        }
+  
+        tabs[tabFocus].setAttribute("tabindex", 0);
+        tabs[tabFocus].focus();
+      }
+    });
+  });
+  
+  function changeTabs(e) {
+    const target = e.target;
+    const parent = target.parentNode;
+    const grandparent = parent.parentNode;
+  
+    // Remove all current selected tabs
+    parent
+      .querySelectorAll('[aria-selected="true"]')
+      .forEach((t) => t.setAttribute("aria-selected", false));
+  
+    // Set this tab as selected
+    target.setAttribute("aria-selected", true);
+  
+    // Hide all tab panels
+    grandparent
+      .querySelectorAll('[role="tabpanel"]')
+      .forEach((p) => p.setAttribute("hidden", true));
+  
+    // Show the selected panel
+    grandparent.parentNode
+      .querySelector(`#${target.getAttribute("aria-controls")}`)
+      .removeAttribute("hidden");
+  }
+</script>
+</div>
+</div>
+  <div class="window" style="width: 520px;margin:50px;">
+      <div class="title-bar">
+        <div class="title-bar-text">Testing</div>
+      </div>
+      <div class="window-body">
+    <p>H1,2,3,4,5,6</p>
+    <h1>Tab Content</h1>
+    <h2>Tab Content</h2>
+    <h3>Tab Content</h3>
+    <h4>Tab Content</h4>
+    <h5>Tab Content</h5>
+    <a>Link</a>
+    <div class="field-row">
+      <input id="radio10" type="radio" name="fieldset-example2">
+      <label for="radio10">Radio label</label>
+    </div>
+    <div class="field-row">
+      <input id="checkbox10" type="checkbox" name="fieldset-example2">
+      <label for="checkbox10">Checkbox label</label>
+    </div>
+    <div class="field-row" style="width: 300px">
+        <label for="range25"></label>slider</label>
+        <label for="range26">0</label>
+        <input id="range26" type="range" min="1" max="11" value="6" />
+        <label for="range27">10</label>
+      </div>
+    </div>
+    <div class="field-row" style="width: 300px">
+    <select>
+        <option>5 - Incredible!</option>
+        <option>4 - Great!</option>
+        <option selected>3 - Pretty good</option>
+        <option>2 - Not so great</option>
+        <option>1 - Unfortunate</option>
+      </select>
+    </div>
+<div class="field-row" >
+  <section class="tabs" style="width: 500px;height: 250px;vertical-align: top;">
+    <menu role="tablist" aria-label="Sample Tabs">
+      <button aria-selected="true"
+      role="tab"
+      aria-selected="true"
+      aria-controls="panel-1"
+      id="tab-1"
+      tabindex="0">Tab A</button>
+      <button 
+      role="tab"
+      aria-selected="false"
+      aria-controls="panel-2"
+      id="tab-2"
+      tabindex="-1">Tab B</button>
+    </menu>
+    <!-- the tab content -->
+    <div  id="panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
+      <h4>Tab Content</h4>
+      <p>
+        You create the tabs, you would use a menu role="tablist" element then for the tab titles you use a button with the aria-controls parameter set to match the relative role="tabpanel"'s element.
+      </p>
+      <p>
+        Read more at <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role" target="_blank">MDN Web docs - ARIA: tab role</a>
+      </p>
+  </div>
+    <div id="panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2" hidden>
+      <h3>More...</h3>
+      <p>This tab contains a GroupBox</p>
+      <fieldset>
+        <legend>Today's mood</legend>
+        <div class="field-row">
+          <input id="radio10" type="radio" name="fieldset-example2">
+          <label for="radio10">Claire Saffitz</label>
+        </div>
+        <div class="field-row">
+          <input id="radio11" type="radio" name="fieldset-example2">
+          <label for="radio11">Brad Leone</label>
+        </div>
+        <div class="field-row">
+          <input id="radio12" type="radio" name="fieldset-example2">
+          <label for="radio12">Chris Morocco</label>
+        </div>
+        <div class="field-row">
+          <input id="radio13" type="radio" name="fieldset-example2">
+          <label for="radio13">Carla Lalli Music</label>
+        </div>
+      </fieldset>
+    <div id="panel-3" role="tabpanel" tabindex="0" aria-labelledby="tab-3" hidden>
+        <h3>Tab 3</h3>
+        <p>Lorem Ipsum Dolor Sit</p>
+      </div>
+    </section>
+    </div>
+    <div class="status-bar">
+        <p class="status-bar-field">Press F1 for help</p>
+        <p class="status-bar-field">Slide 1</p>
+        <p class="status-bar-field">CPU Usage: 14%</p>
+      </div>
+      <ul class="tree-view">
+        <li>We can put</li>
+        <li><strong style="color: purple">✨ Whatever ✨</strong></li>
+        <li>We want in here</li>
+      </ul>
+      <pre>Microsoft&#10094;R&#10095; Windows DOS 
+        &#10094;C&#10095; Copyright Microsoft Corp 1990-2001
+    </pre>
+    <div class="field-row-stacked" style="width: 520px">
+        <label for="text24">Additional notes</label>
+        <textarea id="text24" rows="8"></textarea>
+      </div>
+      <ul class="tree-view">
+        <li>Table of Contents</li>
+        <li>What is web development?</li>
+        <li>
+          CSS
+          <ul>
+            <li>Selectors</li>
+            <li>Specificity</li>
+            <li>Properties</li>
+          </ul>
+        </li>
+        <li>
+          <details closed>
+            <summary>JavaScript</summary>
+            <ul>
+              <li>Avoid at all costs</li>
+        <li>HTML</li>
+        <li>Special Thanks</li>
+      </ul>
+    
