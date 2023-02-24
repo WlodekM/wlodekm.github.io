@@ -1,4 +1,5 @@
 function getp(url){
+    let result = ""
 fetch(url)
     .then(function (response) {
         switch (response.status) {
@@ -11,11 +12,11 @@ fetch(url)
         }
     })
     .then(function (template) {
-        let result = (template);
+     result = (template);
     })
     .catch(function (response) {
         // "Not Found"
-        let result = (response.statusText);
+     result = (response.statusText);
     });
     return(result)
 }
