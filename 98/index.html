@@ -44,7 +44,7 @@ legend     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 
   </div>
 </div>
 
-<div class="window" style="width: 300px" id="window2">
+<div class="window" style="width: 300px" id="window2" hidden>
   <div class="title-bar" id="window2header">
     <div class="title-bar-text">A Window With Stuff In It</div>
     <div class="title-bar-controls">
@@ -79,7 +79,7 @@ legend     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 
     </div>
   </div>
 
-  <div class="window" style="width: 300px" id="window4">
+  <div class="window" style="width: 300px" id="window4" hidden>
     <div class="title-bar" id="window4header">
       <div class="title-bar-text">Sign up</div>
       <div class="title-bar-controls">
@@ -102,7 +102,7 @@ legend     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 
     </div>
   </div>
 
-  <div class="window" style="width: 300px" id="window5">
+  <div class="window" style="width: 300px" id="window5" hidden>
     <div class="title-bar" id="window5header">
       <div class="title-bar-text">Checkboxes</div>
       <div class="title-bar-controls">
@@ -214,7 +214,14 @@ dragElement(document.getElementById("window7"));
 	<section class="field-row">
 		<button class="start"><b>Start</b></button>
 		<section class="content">
-		<div class="formatDiv"><button class="format" onclick="foldWindow('window1')">Text edithor</button></div>
+		<div class="formatDiv"><button class="format" onclick="foldWindow('window1')">Text edithor</button>
+    </div>
+		<div class="formatDiv"><button class="format" onclick="foldWindow('window2')">Window test</button>
+    </div>
+		<div class="formatDiv"><button class="format" onclick="foldWindow('window4')">Form test</button>
+    </div>
+		<div class="formatDiv"><button class="format" onclick="foldWindow('window5')">Checkboxes</button>
+    </div>
 		</section>
 		
  		<span class="time">
