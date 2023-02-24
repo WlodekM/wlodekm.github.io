@@ -1,11 +1,11 @@
 
-<div class="window" style="width: 300px" id="window6">
-  <div class="title-bar" id="window2header">
+<div class="window" style="width: 300px" id="window10">
+  <div class="title-bar" id="window10header">
     <div class="title-bar-text">Resizable window</div>
     <div class="title-bar-controls">
       <button aria-label="Minimize"></button>
       <button aria-label="Maximize"></button>
-      <button onclick="closewindow('window2')" aria-label="Close"></button>
+      <button onclick="closewindow('window10')" aria-label="Close"></button>
     </div>
   </div>
   <div class="window-body">
@@ -16,5 +16,5 @@
   </div>
 </div>
 <script>
-dragElement(document.getElementById("window6"));
+dragElement(document.getElementById("window10"));
 </script>

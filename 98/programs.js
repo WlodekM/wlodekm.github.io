@@ -1,4 +1,5 @@
-fetch('https://wlodekm.github.io/98/program.txt')
+function getp(url){
+fetch(url)
     .then(function (response) {
         switch (response.status) {
             // status "OK"
@@ -10,9 +11,12 @@ fetch('https://wlodekm.github.io/98/program.txt')
         }
     })
     .then(function (template) {
-        console.log(template);
+        return(template);
     })
     .catch(function (response) {
         // "Not Found"
-        console.log(response.statusText);
+        return(response.statusText);
     });
+}
+function openp(url){document.write(getp(url))}
+console.log(getp('https://wlodekm.github.io/98/program.txt'))
