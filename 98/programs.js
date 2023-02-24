@@ -11,12 +11,13 @@ fetch(url)
         }
     })
     .then(function (template) {
-        return(template);
+        let result = (template);
     })
     .catch(function (response) {
         // "Not Found"
-        return(response.statusText);
+        let result = (response.statusText);
     });
+    return(result)
 }
 function openp(url){document.write(getp(url))}
 console.log(getp('https://wlodekm.github.io/98/program.txt'))
