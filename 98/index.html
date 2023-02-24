@@ -16,16 +16,18 @@
 #window4{top:110px;left:330px}
 #window5{top:300px;left:000px}
 #window6{top:300px;left:330px}
+#window7{top:345px;left:330px}
 .window .title-bar {
   cursor: move;
 }
-p {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
+p          {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
 .title-bar {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
-label {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
-button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
+label      {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
+button     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
+legend     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
   </style>
 
-<div class="window" style="width: 300px" id="window1">
+<div class="window" style="width: 300px" id="window1" hidden>
   <div class="title-bar" id="window1header">
     <div class="title-bar-text">Resizable window</div>
     <div class="title-bar-controls">
@@ -134,12 +136,12 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
   </div>
 
   <div class="window" style="width: 400px" id="window6">
-    <div class="title-bar">
+    <div class="title-bar" id="window6header">
       <div class="title-bar-text">A Window With Tabs and Groups</div>
       <div class="title-bar-controls">
         <button aria-label="Minimize" onclick="foldElement('window6')"></button>
         <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
+        <button aria-label="Close" onclick="closewindow('window6')"></button>
       </div>
     </div>
     <div class="window-body" id="window6content" hidden>
@@ -177,6 +179,23 @@ button {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 a
       </section>
     </div>
   </div>
+
+  <div class="window" style="width: 400px" id="window7">
+    <div class="title-bar" id="window7header">
+      <div class="title-bar-text">Volume</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize" onclick="foldElement('window7')"></button>
+      </div>
+    </div>
+    <div class="window-body" id="window7content">
+      <div class="field-row" style="width: 300px">
+        <label for="range25">Volume:</label>
+        <label for="range26">Low</label>
+        <input id="range26" type="range" min="1" max="11" value="5" />
+        <label for="range27">High</label>
+      </div>
+    </div>
+  </div>
 <script src="https://wlodekm.github.io/98/programs.js"></script>
 <script src="https://wlodekm.github.io/98lib.js"></script>
 <script>
@@ -188,13 +207,14 @@ dragElement(document.getElementById("window3"));
 dragElement(document.getElementById("window4"));
 dragElement(document.getElementById("window5"));
 dragElement(document.getElementById("window6"));
+dragElement(document.getElementById("window7"));
 </script>
 
 <div class="startBar">
 	<section class="field-row">
 		<button class="start"><b>Start</b></button>
 		<section class="content">
-			<div class="formatDiv"><button class="format">Random Program</button></div>
+		<div class="formatDiv"><button class="format" onclick="foldWindow('window1')">Text edithor</button></div>
 		</section>
 		
  		<span class="time">

@@ -69,6 +69,17 @@ function dragElement(elmnt) {
         }
     }
   }
+  function foldWindow(tid){
+    let btn = document.getElementById(tid);
+    if (btn) {
+        let disabled = btn.hasAttribute('hidden');
+        if (disabled) {
+          btn.removeAttribute("hidden");
+        } else {
+          btn.setAttribute("hidden", "");
+        }
+    }
+  }
   console.log("│  Folding  loaded  │");
   console.log("│                   │");
 var today = new Date();
