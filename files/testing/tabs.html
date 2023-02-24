@@ -1,12 +1,12 @@
 <head>
     <title>Tabs</title>
-    <link
-  rel="stylesheet"
-  href="https://botoxparty.github.io/XP.css/98.css"
->
+    <link rel="stylesheet"href="https://botoxparty.github.io/XP.css/98.css">
+<script src="https://wlodekm.github.io/98lib.js"></script>
 <style>
     code{color:black}
     body{background-color: teal;}
+.window{position: absolute;}
+.title-bar:hover{cursor: move;}
 </style>
 </head>
 <script>
@@ -73,8 +73,8 @@ window.addEventListener("DOMContentLoaded", () => {
 </script>
 </div>
 </div>
-  <div class="window" style="width: 520px;margin:50px;">
-      <div class="title-bar">
+  <div class="window" style="width: 520px;" id="window1">
+      <div class="title-bar" id="window1header">
         <div class="title-bar-text">Testing</div>
       </div>
       <div class="window-body">
@@ -199,4 +199,4 @@ window.addEventListener("DOMContentLoaded", () => {
         <li>HTML</li>
         <li>Special Thanks</li>
       </ul>
-    
+<script>dragElement(document.getElementById("window1"));</script>
