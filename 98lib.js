@@ -5,32 +5,12 @@
 <script src="https://ianrenton.github.io/web3point1/code.js"></script>
 */
 // New window: show and bring to top
+//<!--
 function newWindow(element) {
   $(element).show();
   $(element).selectWindow();
-
-  if (element == '#doom') {
-    loadDoom();
-  }
 }
 
-
-// Load DOOM, because we can
-function loadDoom() {
-$.getScript('https://js-dos.com/6.22/current/js-dos.js', function() {
-  Dos(document.getElementById("doomcanvas"), {
-        wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
-        cycles: 1000,
-        autolock: false,
-    }).ready(function (fs, main) {
-      fs.extract("https://js-dos.com/cdn/upload/DOOM-@evilution.zip").then(function () {
-        main(["-c", "cd DOOM", "-c", "DOOM.EXE"]).then(function (ci) {
-            window.ci = ci;
-        });
-      });
-    });
-});
-}
 
 $( function() {
   // Window drag
@@ -40,7 +20,7 @@ $( function() {
   $( ".window" ).resizable({ handles: "all", alsoresize: ".window-body" });
 
   // Window close
-  $('.windowclose').on("dblclick", function () { $(this).parents('div.window').hide(); });
+  $('.windowclose').on("click", function () { $(this).parents('div.window').hide(); });
 
   // Window click-to-bring-to-top
   (function() {
@@ -67,7 +47,18 @@ $( function() {
 } );
 // make _ button work
 function foldElement(tid){
-  let btn = document.getElementById(tid+'content');
+  let btn = document.getElementById(`${tid}content`);
+  if (btn) {
+      let disabled = btn.hasAttribute('hidden');
+      if (disabled) {
+        btn.removeAttribute("hidden");
+      } else {
+        btn.setAttribute("hidden", "");
+      }
+  }
+}
+function foldWindow(tid){
+  let btn = document.getElementById(tid);
   if (btn) {
       let disabled = btn.hasAttribute('hidden');
       if (disabled) {
