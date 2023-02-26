@@ -1,0 +1,220 @@
+<head>
+    <title>Tabs</title>
+<script src="https://wlodekm.github.io/98lib.js"></script>
+<style>
+    code{color:black}
+    body{background-color: teal;}
+.window{position: absolute;}
+.title-bar:hover{cursor: move;}
+body{
+--BORDER:black
+}
+.gallery {
+  padding: 0px !important;
+  margin: 0px !important;
+  border: 0px solid var(--BORDER);
+  float: left;
+  height: 15vh;/*360px*/
+  width: 100%;
+}
+.gallery img {
+  height: 75%;
+  object-fit:cover;
+  width: 100%;
+}
+.gallery:hover{border-color: var(--BORDERHOVER);}
+.gamesa{text-align: center;}
+.desc {
+  text-align: center;
+  color: var(--FONT-COLOR);
+  position: relative;
+  top: calc(37.5% - (4em) );
+}
+.row{padding:15px 0px 15px 0px;}
+.row {display: -webkit-flex;display: flex;}
+.column{margin: 0 15px 0 15px;}
+.column.side {-webkit-flex: 1;-ms-flex: 1;flex: 1;}
+
+</style>
+<link rel="stylesheet"href="https://botoxparty.github.io/XP.css/98.css">
+</head>
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll('[role="tab"]');
+    const tabList = document.querySelector('[role="tablist"]');
+  
+    // Add a click event handler to each tab
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", changeTabs);
+    });
+  
+    // Enable arrow navigation between tabs in the tab list
+    let tabFocus = 0;
+  
+    tabList.addEventListener("keydown", (e) => {
+      // Move right
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") {
+        tabs[tabFocus].setAttribute("tabindex", -1);
+        if (e.key === "ArrowRight") {
+          tabFocus++;
+          // If we're at the end, go to the start
+          if (tabFocus >= tabs.length) {
+            tabFocus = 0;
+          }
+          // Move left
+        } else if (e.key === "ArrowLeft") {
+          tabFocus--;
+          // If we're at the start, move to the end
+          if (tabFocus < 0) {
+            tabFocus = tabs.length - 1;
+          }
+        }
+  
+        tabs[tabFocus].setAttribute("tabindex", 0);
+        tabs[tabFocus].focus();
+      }
+    });
+  });
+  
+  function changeTabs(e) {
+    const target = e.target;
+    const parent = target.parentNode;
+    const grandparent = parent.parentNode;
+  
+    // Remove all current selected tabs
+    parent
+      .querySelectorAll('[aria-selected="true"]')
+      .forEach((t) => t.setAttribute("aria-selected", false));
+  
+    // Set this tab as selected
+    target.setAttribute("aria-selected", true);
+  
+    // Hide all tab panels
+    grandparent
+      .querySelectorAll('[role="tabpanel"]')
+      .forEach((p) => p.setAttribute("hidden", true));
+  
+    // Show the selected panel
+    grandparent.parentNode
+      .querySelector(`#${target.getAttribute("aria-controls")}`)
+      .removeAttribute("hidden");
+  }
+</script>
+</div>
+</div>
+<!-- Window -->
+  <div class="window" style="width: 520px; " id="window1">
+      <div class="title-bar" id="window1header">
+        <div class="title-bar-text">Testing</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      
+  <div class="status-bar">
+    <h5 class="status-bar-field" style="width:55%">WlodekM</h5>
+    <p class="status-bar-field">Scratch</p>
+    <p class="status-bar-field">Github</p>
+    <p class="status-bar-field">Telegram</p>
+    <p class="status-bar-field">Discord</p>
+  </div>
+      <div class="window-body">
+    
+        <p>Hi, my name is WlodekM<br>
+          I'm a Ukranian game developer<br>
+          I specify in making scratch games and
+          I know Python, javascript, html(css)
+          </p>
+          <div class="games">
+    
+             <h3>My games</h3>
+          <!--<div class="gamesgallery">
+             <a href="#" target="_blank">
+                <div class="gallery">
+                <img src="https://wlodekm.github.io/icons/rpg.png" width="600" height="400">
+                <div class="desc" style="vertical-align: middle">Untitled rpg game</div>
+             </div></a>
+    
+             <a href="https://scratch.mit.edu/projects/726390454/" target="_blank">
+                <div class="gallery">
+                <img src="https://wlodekm.github.io/icons/s2.png" width="600" height="400">
+                <div class="desc" style="vertical-align: middle">Spikes 2</div>
+             </div></a>
+    
+             <a href="https://scratch.mit.edu/projects/717436838/" target="_blank">
+                <div class="gallery">
+                <img src="https://wlodekm.github.io/icons/CG.png" width="600" height="400">
+                <div class="desc" style="vertical-align: middle">Cool game</div>
+             </div></a>
+          </div>-->
+          <div class="row">
+            <a href="https://scratch.mit.edu/projects/726390454/" target="_blank">
+             <article role="tabpanel" class="column side" >
+                   <div class="gallery">
+                   <img src="https://wlodekm.github.io/icons/s2.png" width="600" height="400">
+                   <div class="desc" style="vertical-align: middle">Spikes 2</div>
+                </div>
+             </article>
+            </a>
+    
+             <a href="https://scratch.mit.edu/projects/717436838/" target="_blank">
+             <article role="tabpanel" class="column side" >
+                <div class="gallery">
+                <img src="https://wlodekm.github.io/icons/CG.png" width="600" height="400">
+                <div class="desc" style="vertical-align: middle">Cool game</div>
+             </div>
+             </article>
+            </a>
+    
+            <a href="#" target="_blank">
+             <article role="tabpanel" class="column side" >
+                <div class="gallery">
+                   <img src="https://wlodekm.github.io/icons/rpg.png" width="600" height="400">
+                   <div class="desc" style="vertical-align: middle">Untitled rpg game</div>
+                </div>
+             </article>
+            </a>
+
+            <article role="tabpanel" class="column side" >
+               <a href="https://scratch.mit.edu/projects/639049996/" target="_blank">
+                  <div class="gallery">
+                  <img src="https://wlodekm.github.io/icons/EG.png" width="600" height="400">
+                  <div class="desc" style="vertical-align: middle">Box 2D sandbox</div>
+                  </div>
+            </article></a>
+    
+                  </div>
+          
+    
+          <div class="row">
+             <article role="tabpanel" class="column side" >
+                <a href="https://wlodekm.github.io/triangle-zh-tri-stuff-dev/other/games/Box2D/Play/" target="_blank">
+                   <div class="gallery">
+                   <img src="https://wlodekm.github.io/icons/B2D.png" width="600" height="400">
+                   <div class="desc" style="vertical-align: middle">Box 2D sandbox</div>
+                   </div>
+             </article></a>
+    
+             <div class="column side" >
+             </div>
+    
+             <div class="column side" >
+             </div>
+    
+             <div class="column side" >
+             </div>
+    
+    
+         </div></div>
+          <!--
+          <div class="quote">
+          <img src="https://wlodekm.github.io/icons/text.gif">
+          </div>
+          1
+          -->
+          </p>
+       </div>
+
+</div>
+<script>dragElement(document.getElementById("window1"));</script>

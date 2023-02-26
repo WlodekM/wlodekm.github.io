@@ -73,26 +73,60 @@ window.addEventListener("DOMContentLoaded", () => {
 </script>
 </div>
 </div>
-  <div class="window" style="width: 520px;" id="window1">
+<!-- Window -->
+  <div class="window" style="width: 520px; " id="window1">
       <div class="title-bar" id="window1header">
         <div class="title-bar-text">Testing</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Help"></button>
+          <button aria-label="Close"></button>
+        </div>
       </div>
       <div class="window-body">
     <p>H1,2,3,4,5,6</p>
-    <h1>Tab Content</h1>
-    <h2>Tab Content</h2>
-    <h3>Tab Content</h3>
-    <h4>Tab Content</h4>
-    <h5>Tab Content</h5>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <h4>h4</h4>
+    <h5>h5</h5>
     <a>Link</a>
+    <!-- Radio switches -->
     <div class="field-row">
       <input id="radio10" type="radio" name="fieldset-example2">
       <label for="radio10">Radio label</label>
     </div>
     <div class="field-row">
+        <input id="radio7" type="radio" name="second-example">
+        <label for="radio7">Active</label>
+      </div>
+      <div class="field-row">
+        <input checked disabled id="radio8" type="radio" name="second-example">
+        <label for="radio8">Disabled</label>
+      </div>
+      <div class="field-row">
+        <input disabled id="radio9" type="radio" name="second-example">
+        <label for="radio9">Active disabled</label>
+      </div>
+      <!-- Checkboxes -->
+    <div class="field-row">
       <input id="checkbox10" type="checkbox" name="fieldset-example2">
       <label for="checkbox10">Checkbox label</label>
     </div>
+    <div class="field-row">
+        <input checked type="checkbox" id="example2">
+        <label for="example2">I am checked</label>
+      </div>
+      <div class="field-row">
+        <input disabled type="checkbox" id="example3">
+        <label for="example3">I am inactive</label>
+      </div>
+      <div class="field-row">
+        <input checked disabled type="checkbox" id="example4">
+        <label for="example4">I am inactive but still checked</label>
+      </div>
+      <!-- Slider -->
     <div class="field-row" style="width: 300px">
         <label for="range25"></label>slider</label>
         <label for="range26">0</label>
@@ -100,6 +134,7 @@ window.addEventListener("DOMContentLoaded", () => {
         <label for="range27">10</label>
       </div>
     </div>
+    <!-- Context menu -->
     <div class="field-row" style="width: 300px">
     <select>
         <option>5 - Incredible!</option>
@@ -109,6 +144,7 @@ window.addEventListener("DOMContentLoaded", () => {
         <option>1 - Unfortunate</option>
       </select>
     </div>
+    <!-- Tabs (JS required) -->
 <div class="field-row" >
   <section class="tabs" style="width: 500px;height: 250px;vertical-align: top;">
     <menu role="tablist" aria-label="Sample Tabs">
@@ -163,19 +199,23 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>
     </section>
     </div>
+    <!-- Status bar -->
     <div class="status-bar">
         <p class="status-bar-field">Press F1 for help</p>
         <p class="status-bar-field">Slide 1</p>
         <p class="status-bar-field">CPU Usage: 14%</p>
       </div>
+      <!-- Content box -->
       <ul class="tree-view">
         <li>We can put</li>
         <li><strong style="color: purple">✨ Whatever ✨</strong></li>
         <li>We want in here</li>
       </ul>
+      <!-- Console -->
       <pre>Microsoft&#10094;R&#10095; Windows DOS 
         &#10094;C&#10095; Copyright Microsoft Corp 1990-2001
     </pre>
+    <!-- Tree of contents -->
     <div class="field-row-stacked" style="width: 520px">
         <label for="text24">Additional notes</label>
         <textarea id="text24" rows="8"></textarea>
@@ -196,7 +236,35 @@ window.addEventListener("DOMContentLoaded", () => {
             <summary>JavaScript</summary>
             <ul>
               <li>Avoid at all costs</li>
+            </li>
+        </details>
         <li>HTML</li>
         <li>Special Thanks</li>
       </ul>
+      </ul>
+      <details>
+        <!-- Mini tree of contents -->
+        <summary>Open!</summary>
+        <ul>
+          <li>This is my family</li>
+          <li>This is my house</li>
+          <li>This is my car</li>
+        </ul>
+      </details>
+      <!-- Title bar -->
+    <div class="title-bar">
+        <div class="title-bar-text">A Title Bar</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Help"></button>
+          <button aria-label="Close"></button>
+        </div>
+    </div>
+    <!-- Progress bar -->
+    <progress max="100" value="70"></progress>
+    <br>
+    <progress max="100" ></progress>
+
+</div>
 <script>dragElement(document.getElementById("window1"));</script>
