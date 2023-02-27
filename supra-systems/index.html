@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3.1 testing</title>
+    <link rel="stylesheet" href="https://ianrenton.github.io/web3point1/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://ianrenton.github.io/web3point1/code.js"></script>
+    <script src="https://wlodekm.github.io/supra-systems/code.js"></script>
+    <style>
+        table tbody tr th{padding: 2px;}
+        button{
+            --button-bg:rgb(198, 198, 198);
+            --button-light:rgb(235, 235, 235);
+            --button-dark:rgb(148, 148, 148);
+            --button-border-width:2px;
+            font-family: 'WinThreeOne', sans-serif;
+            background-color: rgb(198, 198, 198);
+            border-top: var(--button-light) solid var(--button-border-width);
+            border-left: var(--button-light) solid var(--button-border-width);
+            border-bottom: var(--button-dark) solid var(--button-border-width);
+            border-right: var(--button-dark) solid var(--button-border-width);
+            border-radius: 1px;
+            box-shadow: 0 0 0 1px black;
+        }
+        button:active{
+            border-top: var(--button-dark) solid var(--button-border-width);
+            border-left: var(--button-dark) solid var(--button-border-width);
+            border-bottom: var(--button-light) solid var(--button-border-width);
+            border-right: var(--button-light) solid var(--button-border-width);
+            padding-left: 5.5px;
+            padding-right: 6.5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pswd" class="window" style="position: absolute; top: 200px; left: 200px; width: 175px; height: 112.5px; z-index: 3">
+        <div class="windowheader">
+          <div class="windowclose"></div>
+          <div class="windowtitle">Password</div>
+        </div>
+        <div class="windowinner" style="top:5.75px;position: relative;">
+          <div class="fullwindowhtml">
+              <p>Please enter the password to this folder</p>
+              <input type="text" style="width:150px;margin-bottom:5px;">
+              <br>
+              <button style="margin-left:1px;">Proceed</button>
+          </div>
+        </div>
+      </div>
+    <div id="File explorer" class="window" style="position: absolute; top: 150px; left: 150px; width: auto; height: auto; z-index: 1">
+        <div class="windowheader">
+          <div class="windowclose"></div>
+          <div class="windowtitle">File explorer</div>
+        </div>
+      <div class="windowmenubar" style="height:10px !important;font-size: smaller;">
+        <div class="menuitem" style="position:relative;top:-3px !important;"><b><u>O</u>ptions <u>W</u>indow</b></div>
+      </div>
+        <div class="windowinner" style="top:5.75px;position: relative;">
+          <div class="fullwindowhtml">
+            <table><tbody><tr><th><p>Index of /confidentional</p></th><th>Name</th><th>&nbsp;Last modified</th><th>&nbsp;Size</th><th>&nbsp;Description</th></tr><tr><th colspan="5"><hr></th></tr>
+              <tr><td valign="top"><img src="https://wlodekm.github.io/icons/back.gif" alt="[DIR]"></td><td><a href="..">Parent Directory</a></td><td>&nbsp;</td><td align="center">&nbsp;&nbsp;- </td><td>&nbsp;</td></tr>
+              <tr><td valign="top"><img src="https://wlodekm.github.io/icons/video.png" alt="[MP4]"></td><td><a href="link.mp4">scary vid 1</a></td><td align="center">&nbsp;&nbsp;-   </td><td align="center">&nbsp;&nbsp;- </td><td align="center">&nbsp;-</td></tr>
+              <tr><td valign="top"><img src="https://wlodekm.github.io/icons/video.png" alt="[MP4]"></td><td><a href="link2.mp4">scary vid 2</a></td><td align="center">&nbsp;&nbsp;-  </td><td align="center">&nbsp;&nbsp;- </td><td align="center">&nbsp;-</td></tr>
+              <tr><td valign="top"><img src="https://win98icons.alexmeub.com/icons/png/key_padlock-1.png" alt="[LOCK-DIR]"></td><td><a onclick="pswd()">/secure/</a></td><td align="center">&nbsp;&nbsp;-  </td><td align="center">&nbsp;&nbsp;- </td><td align="center">&nbsp;-</td></tr>
+              <tr><th colspan="5"><hr></th></tr>
+          </div>
+        </div>
+      </div>
+</body>
+</html>
