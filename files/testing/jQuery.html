@@ -7,28 +7,53 @@ $(document).ready(function(){
   $("#flip").click(function(){
     $("#panel").slideToggle("slow");
   });
+  $("#form1").submit(function(e) {
+    e.preventDefault();
+    let valuet = $('#form1').find('input[name="text"]').val();
+    if (valuet !== ""){
+        $("#test").text()
+        $('#form1').find('input[name="text"]').val("");
+        $("#notes").append(`<li id="item"><p>${valuet}</p></li>`);
+    } else {
+        $("#test").text("You can't add an emty task!")
+    }
+});
+  $("#item").click(function(e){
+    $(e).text("deketed!");
+  });
 });
 </script>
 <style>
+    #form1 {
+        position: absolute;
+        top: 337px;
+        left: 11px;
+    }
+    #form1 input[type=text]{width:calc(215px * 0.73);height:16px;}
+    #form1 input[type=submit]{width:calc(215px * 0.24);position: relative;right:calc(215px * 0.02);padding: 0;margin:0;height:22px;}
+    .notes {
+        margin-top: 10px;
+        margin-left: 10px;
+        height: 325px;
+        width: 215px;
+        border: 1px rgba(0,0,0,0.60) solid;
+        border-radius: 2px;
+    }
+    li:hover{
+        text-decoration:line-through;
+    }
     
-#panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: #e5eecc;
-  border: solid 1px #c3c3c3;
-}
-
-#panel {
-  padding: 50px;
-  display: none;
-}
-#flip:hover{
-cursor:pointer;
-}
 </style>
 </head>
 <body>
-<div id="flip">Click to slide down panel</div>
-<div id="panel">Hello world!</div>
+<div class="notes">
+<ol id="notes"></ol>
+<form id="form1">
+    <input type="text" name="text">
+    <input type="submit">
+    <br>
+    <label id="test">test</label>
+</div>
+</form>
 </body>
 </html>
