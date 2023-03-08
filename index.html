@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>WlodekM's website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 <style>
 body{
 /* vars */
@@ -9,7 +12,7 @@ body{
 --BORDERHOVER: rgba(250, 250, 250, 0.175);
 --BG: #332a41;
 --FG: rgba(250, 250, 250, 0.075);
---FONT: monospace;
+--FONT: 'Space Mono', monospace;
 --FONT-COLOR: #fff;
 margin:0 0 0 0 !important;
 }
@@ -109,8 +112,9 @@ body{
    <a href="https://t.me/WlodekM"><img src="https://wlodekm.github.io/icons/TG-ICO.svg"></a>
  </div></div>
 </head>
+<!-- <div id="blob"></div>
+<div id="blur"></div> -->
 <body>
-
    <div class="content" id="full">
       <h1>About me</h1>
       <br>
@@ -238,12 +242,40 @@ body{
       <br>
       <ul>
          <li>
-            <a href="/development/">
+            <a href="/development/"><coollink data-value="/development/">
                /development/
-            </a>
+            </coollink></a>
          </li>
       </ul>
       </p>
    </div>
 </body>
 </html>
+<script>const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnop";
+
+   let interval = null;
+   
+   document.querySelector("coollink").onmouseover = event => {  
+   let iteration = 0;
+   
+   clearInterval(interval);
+   
+   interval = setInterval(() => {
+   event.target.innerText = event.target.innerText
+   .split("")
+   .map((letter, index) => {
+   if(index < iteration) {
+     return event.target.dataset.value[index];
+   }
+   
+   return letters[Math.floor(Math.random() * 26)]
+   })
+   .join("");
+   
+   if(iteration >= event.target.dataset.value.length){ 
+   clearInterval(interval);
+   }
+   
+   iteration += 1 / 3;
+   }, 30);
+   }</script>
