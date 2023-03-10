@@ -23,7 +23,7 @@
        backdrop-filter: blur(15px);
     }
     .content #full {
-       min-height: 91.2vh;
+       min-height: 91.2vh !important;
     }
     .content p{
        color:var(--FONT-COLOR);
