@@ -4,11 +4,20 @@
             --white: #fff;
             --bg: #eee;
             --font: #555;
+            
+            --bq-bg:     #efefef;
+            --bq-border: #ddd   ;
+            --bq-comment-border: #aaa;
+            --bq-comment-bg:  #fafaff;
+
             --sidebar-border:  #d95;
             --content-1:       #FF9233;
             --sidebar:         #FFAD6E;
             --top-links:       #Fc5;
             --content-light-1: #fec;
+
+            --sidebar-head:    #533;
+            --sidebar-text:    #fff;
         }
 
         /* *{
@@ -172,7 +181,7 @@
         
         SPAN.SideBar_Head
         {
-            color: #533;
+            color: var(--sidebar-head);
             font-size: 11px;
         }
         
@@ -193,7 +202,7 @@
         
         A.SideBar
         {
-            color: var(--white);
+            color: var(--sidebar-text);
             text-decoration: none;
         }
         
@@ -208,8 +217,8 @@
             margin-bottom: 40px;
         
             padding: 8px;
-            border: #ddd solid 1px;
-            background-color: #efefef;
+            border: var(--bq-border) solid 1px;
+            background-color: var(--bq-bg);
         }
         
         A.news_title
@@ -225,7 +234,7 @@
             padding: 8px;
             margin-top: 10px;
             margin-bottom: 15px;
-            border: #ddd solid 1px;
+            border: var(--bq-border) solid 1px;
             background-color: var(--white);
         }
         
@@ -386,7 +395,7 @@
         
         DIV.DLBox_Inner
         {
-            border: 1px solid #ddd;
+            border: 1px solid var(--bq-border);
             background-color: var(--bg);
             padding: 5px;
             text-align: center;
@@ -455,7 +464,7 @@
         
         tr.odd
         {
-            background: #ddd;
+            background: var(--bq-border);
         }
         
         
@@ -502,7 +511,7 @@
         TABLE.comment
         {
             width: 100%;
-            border: 1px solid #ddd;
+            border: 1px solid var(--bq-border);
             
         }
         
@@ -510,7 +519,7 @@
         {
             font-size: 9px;
             font-weight: normal;
-            background-color: #ddd;
+            background-color: var(--bq-border);
         
         }
         
@@ -558,8 +567,8 @@
             margin: 0px;
             margin-left: 10px;
             padding: 5px;
-            border: 1px #aaa solid;
-            background-color: #fafaff;
+            border: 1px var(--bq-comment-broder) solid;
+            background-color: var(--bq-comment-bg);
         }
         
         DIV.commentcontrols
@@ -601,7 +610,7 @@
             margin-top: 10px;
             padding: 10px;
             padding-bottom: 0px;
-            border: 1px #ddd solid;
+            border: 1px var(--bq-border) solid;
             background-color: #fafafa;
         }
         
@@ -675,7 +684,7 @@
         DIV.InfoLine, DIV.InfoLineAlt
         {
             padding: 6px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid var(--bq-border);
         }
         
         DIV.InfoLineAlt
