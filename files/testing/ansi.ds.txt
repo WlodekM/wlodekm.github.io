@@ -1,0 +1,43 @@
+Example
+
+[1;40;32mThat's some cool formatted text, right?
+Color Names
+
+[0;30mGray[0;0m
+[0;31mRed[0;0m
+[0;32mGreen[0;0m
+[0;33mYellow[0;0m
+[0;34mBlue[0;0m
+[0;35mPink[0;0m
+[0;36mCyan[0;0m
+[0;37mWhite[0;0m
+[0;40mFirefly dark blue background[0;0m
+[0;41mOrange background[0;0m
+[0;42mMarble blue background[0;0m
+[0;43mGreyish turquoise background[0;0m
+[0;44mGray background[0;0m
+[0;45mIndigo background[0;0m
+[0;46mLight gray background[0;0m
+[0;47mWhite background[0;0m
+Colors
+
+[0;30mExample[0;0m [0;31mExample[0;0m [0;32mExample[0;0m [0;33mExample[0;0m [0;34mExample[0;0m [0;35mExample[0;0m [0;36mExample[0;0m [0;37mExample[0;0m
+Backgrounds
+
+[0;40mExample[0;0m [0;41mExample[0;0m [0;42mExample[0;0m [0;43mExample[0;0m [0;44mExample[0;0m [0;45mExample[0;0m [0;46mExample[0;0m [0;47mExample[0;0m
+Backgrounds & Colors
+
+[0;40;30mExample[0;0m [0;40;31mExample[0;0m [0;40;32mExample[0;0m [0;40;33mExample[0;0m [0;40;34mExample[0;0m [0;40;35mExample[0;0m [0;40;36mExample[0;0m [0;40;37mExample[0;0m
+[0;41;30mExample[0;0m [0;41;31mExample[0;0m [0;41;32mExample[0;0m [0;41;33mExample[0;0m [0;41;34mExample[0;0m [0;41;35mExample[0;0m [0;41;36mExample[0;0m [0;41;37mExample[0;0m
+[0;42;30mExample[0;0m [0;42;31mExample[0;0m [0;42;32mExample[0;0m [0;42;33mExample[0;0m [0;42;34mExample[0;0m [0;42;35mExample[0;0m [0;42;36mExample[0;0m [0;42;37mExample[0;0m
+[0;43;30mExample[0;0m [0;43;31mExample[0;0m [0;43;32mExample[0;0m [0;43;33mExample[0;0m [0;43;34mExample[0;0m [0;43;35mExample[0;0m [0;43;36mExample[0;0m [0;43;37mExample[0;0m
+[0;44;30mExample[0;0m [0;44;31mExample[0;0m [0;44;32mExample[0;0m [0;44;33mExample[0;0m [0;44;34mExample[0;0m [0;44;35mExample[0;0m [0;44;36mExample[0;0m [0;44;37mExample[0;0m
+[0;45;30mExample[0;0m [0;45;31mExample[0;0m [0;45;32mExample[0;0m [0;45;33mExample[0;0m [0;45;34mExample[0;0m [0;45;35mExample[0;0m [0;45;36mExample[0;0m [0;45;37mExample[0;0m
+[0;46;30mExample[0;0m [0;46;31mExample[0;0m [0;46;32mExample[0;0m [0;46;33mExample[0;0m [0;46;34mExample[0;0m [0;46;35mExample[0;0m [0;46;36mExample[0;0m [0;46;37mExample[0;0m
+[0;47;30mExample[0;0m [0;47;31mExample[0;0m [0;47;32mExample[0;0m [0;47;33mExample[0;0m [0;47;34mExample[0;0m [0;47;35mExample[0;0m [0;47;36mExample[0;0m [0;47;37mExample[0;0m
+Bold
+
+[1;30mExample[0;0m [1;31mExample[0;0m [1;32mExample[0;0m [1;33mExample[0;0m [1;34mExample[0;0m [1;35mExample[0;0m [1;36mExample[0;0m [1;37mExample[0;0m
+Underlined
+
+[4;30mExample[0;0m [4;31mExample[0;0m [4;32mExample[0;0m [4;33mExample[0;0m [4;34mExample[0;0m [4;35mExample[0;0m [4;36mExample[0;0m [4;37mExample[0;0m
