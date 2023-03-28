@@ -2,120 +2,56 @@
 <html>
 <head>
 <title>WlodekM's website</title>
-<style>
-body{
-/* vars */
---BORDER: rgba(250, 250, 250, 0.075);
---BORDERHOVER: rgba(250, 250, 250, 0.175);
---BG: #332a41;
---FG: rgba(250, 250, 250, 0.075);
---FONT: monospace;
---FONT-COLOR: #fff;
-margin:0 0 0 0 !important;
-}
-a{text-decoration: none;}
-
-/* content div */
-.content{
-   --margin: 30px;
-   margin-left:var(--margin);margin-top:var(--margin);margin-right:var(--margin);margin-bottom:var(--margin);
-   padding: var(--margin);
-   font-family: var(--FONT);
-   background-color: var(--FG);
-   border-color: var(--BORDER);
-   border-width: 2px;
-   border-style: solid;
-   border-radius: var(--margin);
-   backdrop-filter: blur(15px);
-}
-.content #full {
-   min-height: 91.2vh;
-}
-.content p{
-   color:var(--FONT-COLOR);
-   font-size: 125%;
-}
-.content h1{
-   color:var(--FONT-COLOR);
-   font-size: 175%;
-   font-weight: 550;
-}
-.content h3{
-   color:var(--FONT-COLOR);
-   font-size: 155%;
-   font-weight: 535;
-}
-.content a {color:rgb(0, 174, 255)}
-body{background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(https://c4.wallpaperflare.com/wallpaper/531/951/621/digital-digital-art-artwork-illustration-minimalism-hd-wallpaper-preview.jpg); background-size: cover;background-position: top 15vh;}
-ul{color: var(--FONT-COLOR);}
-/* game gallery */
-div.gallery {
-  border: 2px solid var(--BORDER);
-  border-radius: 7.5px;
-  float: left;
-  height: 35vh;/*360px*/
-  width: 100%;
-  transition: border-color 0.5s;
-}
-div.gallery img {
-  height: 75%;
-  object-fit:cover;
-  width: 100%;
-  border-radius: 6.5px 6.5px 0px 0px;
-}
-div.gallery:hover{border-color: var(--BORDERHOVER);}
-.gamesa{text-align: center;}
-.desc {
-  text-align: center;
-  color: var(--FONT-COLOR);
-  position: relative;
-  top: calc(25% - (4em) );
-}
-.row{padding:15px 0px 15px 0px;}
-.row {display: -webkit-flex;display: flex;}
-.column{margin: 0 15px 0 15px;}
-.column.side {-webkit-flex: 1;-ms-flex: 1;flex: 1;}
-
-/*topnav*/
-.topnav{--margin: 20px;padding-left:var(--margin);padding-top:var(--margin);padding-right:var(--margin);padding-bottom:var(--margin);background-color: rgba(0, 0, 0, 0.4);}
-.spacer{flex: 1 auto;margin: 0;padding: 0;box-sizing: border-box;}
-.topnav h2 {margin: 0;padding: 0;box-sizing: border-box;}
-.topnav a img{size: 3px;}
-.topnav{position: sticky;bottom: 00px;}
-.logo {position: absolute;top: 36%; text-decoration: none; color:#f0f0f0;font-size: 200%;font-family: monospace;font-weight: 600;}
-.link {position: sticky;top: -1.7vh; text-decoration: none;font-size: 150%;color:#f0f0f0;}
-.topnav{position: sticky;height: 5vh;}
-.topnav img {transition: filter 0.25s; filter:brightness(0.635) ;margin: 3px 3px 3px 3px;height:45px;}
-.topnav img:hover{filter:brightness(1);}
-.topnav .logo{transition: color 0.25s;text-decoration: none;}
-.topnav .logo:hover{color: rgb(156, 224, 255);}
-header{position: sticky;}
-/*scrollbar*/
-body{
-    --sc-width:15px;
-    --sc-radius:5px;
-    --sc-color:rgb(112, 112, 112);
-    --sc-bg:rgb(63, 63, 63);
-}::-webkit-scrollbar{width: var(--sc-width);}::-webkit-scrollbar-track{/*border-radius:var(--sc-radius);*/background:var(--sc-bg);}::-webkit-scrollbar-thumb{background:var(--sc-color);border-radius:var(--sc-radius);}
-</style>
+<link rel="stylesheet" href="../style.css">
 <div class="topnav">
-   <a href="" class="logo">WlodekM</a>
-   <div class="spacer" align="right"><!--align="" is so old vscode thinks it doesn't exist-->
+   <a href="" class="logo">PBrowser</a>
+   <div class="spacer" align="right">
    <!-- <a href="/98/" class="link">/98/</a> -->
-   <a><!--href="https://scratch.mit.edu/users/WlodekM"> --><img src="https://wlodekm.github.io/icons/MWR-ICO.svg"></a>
-   <a href="https://scratch.mit.edu/users/WlodekM"><img src="https://wlodekm.github.io/icons/SC-ICO.svg"></a>
-   <a href="https://github.com/WlodekM"><img src="https://wlodekm.github.io/icons/GH-ICO.svg"></a>
-   <a href="https://discordapp.com/users/750565290009559112"><img src="https://wlodekm.github.io/icons/DS-ICO.svg"></a>
-   <a href="https://t.me/WlodekM"><img src="https://wlodekm.github.io/icons/TG-ICO.svg"></a>
  </div></div>
+ <style>
+   #user-content {
+      display: flex;
+      align-items: center;
+      height: 1em;
+   }
+   #user-content h1, #user-content  h2, #user-content h3{
+      position: relative;
+      left: calc(-1em + 2.5px);
+   }
+   #user-content svg {
+      position: relative;
+      fill: white;
+      left: -20px;
+      opacity: 0%;
+      transition: opacity 0.25s;
+   }
+   #user-content svg:hover {
+      opacity: 100%;
+   }
+   #full {
+      height: 75vh !important;
+   }
+ </style>
 </head>
 <body>
 
    <div class="content" id="full">
-      <h1>Pbrowser Help</h1>
+      <h1>Pbrowser Help & About</h1>
+      <p>You can find the most recent wesion <a href="https://www.penguinmod.site/#67327835">here</a></p>
       <br>
       <div class="about">
-         <p>Pbrowser Help
+         <span id="user-content">
+            <a href="#about">
+               <svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true">
+                  <path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z">
+                  </path>
+               </svg>
+            </a>
+            <h1>About</h1>
+         </span>
+         <h3>What is Pbrowser</h3>
+         <p>
+            <a href="https://www.penguinmod.site/#67327835">PBrowser</a> - is a browser made in <a href="https://penguinmod.site">penguinmod</a> - a fork of scratch
          </p>
       </div>
    </div>

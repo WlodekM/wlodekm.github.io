@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'Ubuntu', sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+}
+
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-image: url(http://unsplash.it/1500/750);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+/* Styles for the tilt block */
+.tilt {
+    padding: 5px;
+    border-radius: 10px;
+    float:left;
+    height: 210px;
+    width: 310px;
+    background-color: grey;
+    margin: 50px 50px 50px 50px;
+    transition: box-shadow 0.1s, transform 0.1s;
+    background-size: 105%;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.tilt:hover {
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.tilt .content {
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 10px;
+    height:       calc(100% + 4px);
+    width:      calc(100%);
+    font-size: small;
+    padding:        3px;
+    padding-inline: 5px;
+    position: relative;
+    top: -5px;left: -5px;
+}
+
+h2{
+    margin-top:0;
+}
+
+.content{
+    float:initial;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://wlodekm.github.io/stuff/mycss.css">
+    <link rel="icon" href="https://fsh-bot.frostzzone.repl.co/asset?media=logo.png" type="image/png">
+    <title>Fsh api docs</title>
+    <style>
+        #main-doc p {font-size: 90%;}
+    </style>
+</head>
+<body>
+    <div class="content" id="full">
+        <h1>Api documentation</h1>
+        <p>Add ?plain=1 at the end of urls to get non json responses<br>
+        <span style="font-size: small;">{} is the request type needed<br>
+           [] for parameters (?thing=thang)</span></p>
+        <hr>
+        <span id="main-doc">
+            <h3>Fsh bot api</h3>
+            <p>/ping {get} - Responds with bot ping</p>
+            <p>/info {get} - Responds with bot info</p>
+            <h3>Text api</h3>
+            <p>/filter {get} [text] - Responds with true if text doesn't have bad works else false</p>
+            <p>/censor {get} [text] - Responds with inputed text but bad words are censored</p>
+            <p>/page {get} [url] - Get page contents of an url</p>
+            <h3>Image api</h3>
+            <p>/animal {get} [animal] - Responds with random animal (leave animal empty for animal list)</p>
+            <p>/imagine {get} [text] - Responds with ai image from text (may take up to 2 minutes)</p>
+            <h3>Deprecated</h3>
+            <p>/fish {get} - get random fish image</p>
+        </span>
+    </div>
+</body>
+</html>

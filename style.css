@@ -25,19 +25,19 @@ body{
        backdrop-filter: blur(15px);
     }
     .content #full {
-       min-height: 91.2vh;
+       min-height: 91.2vh !important;
     }
     .content p{
-       color:var(--FONT-COLOR);
        font-size: 125%;
     }
+    h1, h2, h3, h4, h5, h6, p {
+      color:var(--FONT-COLOR);
+    }
     .content h1{
-       color:var(--FONT-COLOR);
        font-size: 175%;
        font-weight: 550;
     }
     .content h3{
-       color:var(--FONT-COLOR);
        font-size: 155%;
        font-weight: 535;
     }
