@@ -3,11 +3,26 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="index.js"></script>
+    <script src="errors.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
     <meta name="color-scheme" content="light dark">
+    <meta charset="UTF-8">
+    <meta name="description" content="Best meower client">
+    <meta name="keywords" content="meower, client, meower client, best meower, best client, best meower client">
+    <meta name="author" content="WlodekM">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meower home™</title>
 </head>
 <body>
+    <div class=top>
+        <h1 id="logo">Meower Posts</h1>
+        <div id=controls>
+            <label for="badwords">Allow bad words:</label><input type="checkbox" id="badwords">
+            <div id=spacer style="width:50px;"></div>
+            <button id="reload">Reload</button>
+        </div>
+    </div>
+    <textarea rows="4" class="container type-message" disabled style="resize: none;width:calc(100% - (11px * 2))">Messaging temporarily disabled</textarea>
     <div id="posts">
         
     </div>
@@ -18,20 +33,40 @@ body{
     margin: 0;
 }
 .top {
-    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: hsl(0, 0%, 25%);
 }
 .top h1 {
-    margin-block-start: 0.25em;
-    margin-block-end: 0.25em;
+    cursor: pointer;
+    padding-inline: 8px;
+    padding-block-start: 0.67em;
+    padding-block-end: 0.67em;
+    height: 100%;
+    margin: 0;
+    transition: background 0.5s;
 }
-.post {
+.top h1:hover{
+    background: rgba(255,255,255,0.25);
+}
+.post, .container {
     border-radius: 5px;
     border: 2px rgba(255,255,255,0.2) solid;
+}
+.post{
+    padding: 4px;
     margin-top: 10px;
+}
+.post img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    border: 1px rgba(255, 255, 255, 0.1) solid;
+}
+.type-message {
+    margin: 8px;
+    border-width: 1px;
 }
 #username{
     font-weight: bold;
@@ -41,6 +76,8 @@ body{
     padding-top: 0;
 }
 #controls {
+    padding-block: 8px;
+    padding-inline-end: 8px;
     display: flex;
     align-items: center;
 }
