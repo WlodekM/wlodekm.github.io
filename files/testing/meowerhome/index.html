@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script src="index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+    <meta name="color-scheme" content="light dark">
+    <title>Meower home™</title>
 </head>
 <body>
     <div id="posts">
@@ -10,13 +13,32 @@
     </div>
 </body>
 <style>
-#username{
-    font-weight: bold;
+body{
+    font-family: 'Ubuntu';
+    margin: 0;
 }
 .top {
+    padding: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: hsl(0, 0%, 25%);
+}
+.top h1 {
+    margin-block-start: 0.25em;
+    margin-block-end: 0.25em;
+}
+.post {
+    border-radius: 5px;
+    border: 2px rgba(255,255,255,0.2) solid;
+    margin-top: 10px;
+}
+#username{
+    font-weight: bold;
+}
+#posts {
+    padding: 8px;
+    padding-top: 0;
 }
 #controls {
     display: flex;

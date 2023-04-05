@@ -20,15 +20,15 @@ function ghome(data) {
 		data_["autoget"].forEach(element => {
 		try {
 			if(element["unfiltered_p"] && (document.getElementById("badwords").checked)) {
-				$("#posts").append(`<div class="post"><p><span id=username>${element["u"]}</span>:${element["unfiltered_p"]}</p></div>`)
-				console.log(`${element["u"]}:${element["unfiltered_p"]}`)
+				$("#posts").append(`<div class="post"><span id=username>${element["u"]}</span><p>${element["unfiltered_p"]}</p></div>`)
+				console.log(`${element["u"]}${element["unfiltered_p"]}`)
 			} else {
 				console.log(`${element["p"]}`)
-				if(element["u"] in ["Discord","Webhook","Revower"]) {
+				if(["Discord","Webhook","Revower"].includes(element["u"])) {
 					element["u"] = element["p"].split(":")[0]
 					element["p"] = element["p"].split(":").slice(1).join(":")
 				}
-				$("#posts").append(`<div class="post"><p><span id=username>${element["u"]}</span>:${element["p"]}</p></div>`)
+				$("#posts").append(`<div class="post"><span id=username>${element["u"]}</span><p>${element["p"]}</p></div>`)
 			}
 		} catch(err) {
 			console.log(`ERROR ON:${element}`);
