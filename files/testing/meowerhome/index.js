@@ -6,7 +6,7 @@ async function getJSONData(url) {
   
 var data_
 $(document).ready(function(){
-	$("body").prepend(`<div class=top><h1>Meower Posts</h1> <button id="reload">Reload</button></div>`)
+	$("body").prepend(`<div class=top><h1>Meower Posts</h1> <div id=controls><label for="badwords">Allow bad words:</label><input type="checkbox" id="badwords"><div id=spacer style="width:50px;"></div><button id="reload">Reload</button></div></div>`)
 	reload()
 	$("#reload").click(function(){
 		$("#posts").empty();
@@ -19,7 +19,7 @@ function ghome(data) {
 		data_copy = JSON.parse(data)
 		data_["autoget"].forEach(element => {
 		try {
-			if(element["unfiltered_p"]) {
+			if(element["unfiltered_p"] && (document.getElementById("badwords").checked)) {
 				$("#posts").append(`<div class="post"><p><span id=username>${element["u"]}</span>:${element["unfiltered_p"]}</p></div>`)
 				console.log(`${element["u"]}:${element["unfiltered_p"]}`)
 			} else {
