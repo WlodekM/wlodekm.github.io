@@ -20,8 +20,21 @@ $(document).ready(function(){
 	$("#logo").click(function(){
 		reload()
 	});
+	$("#postbutton").click(function(){
+		fetch('https://webhooks.meower.org/post/home', {
+			method: 'POST',
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({ "post": $(".type-message").val() })
+		})
+		.then(response => response.text())
+		.then(response => reload())
+		.then($(".type-message").innerHTML = "")
+			});
 
-});
+		});
 function ghome(data) {
 	data_ = JSON.parse(data)
 	data_copy = JSON.parse(data)
@@ -31,10 +44,10 @@ function ghome(data) {
 		try {
 			if(element["unfiltered_p"] && (document.getElementById("badwords").checked)) {
 				$("#posts").append(`<div class="post"><span id=username>${element["u"]}</span><p>${element["unfiltered_p"]}</p></div>`)
-				console.log(`${element["u"]}${element["unfiltered_p"]}`)
+				// console.log(`${element["u"]}${element["unfiltered_p"]}`)
 			} else {
-				console.log(`${element["p"]}`)
-				if(["Discord","Webhook","Revower"].includes(element["u"])) {
+				// console.log(`${element["p"]}`)
+				if(["Discord","Webhooks","Revower"].includes(element["u"])) {
 					element["u"] = element["p"].split(":")[0]
 					element["p"] = element["p"].split(":").slice(1).join(":")
 				}

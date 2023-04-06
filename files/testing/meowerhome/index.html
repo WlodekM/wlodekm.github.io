@@ -22,7 +22,10 @@
             <button id="reload">Reload</button>
         </div>
     </div>
-    <textarea rows="4" class="container type-message" disabled style="resize: none;width:calc(100% - (11px * 2))">Messaging temporarily disabled</textarea>
+    <div class="posting">
+        <textarea rows="4" class="container type-message" style="resize: none;width:calc(100% - (11px * 2) - 100px)"></textarea>
+        <button id="postbutton">Post!</button>
+    </div>
     <div id="posts">
         
     </div>
@@ -31,6 +34,13 @@
 body{
     font-family: 'Ubuntu';
     margin: 0;
+}
+.posting {
+    display: flex;
+}
+.posting button {
+    width: 100px;
+    margin: 8px;
 }
 .top {
     display: flex;
