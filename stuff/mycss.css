@@ -94,7 +94,6 @@
     .topnav{position: sticky;bottom: 00px;}
     .logo {position: absolute;top: 36%; text-decoration: none; color:#f0f0f0;font-size: 200%;font-family: monospace;font-weight: 600;}
     .link {position: sticky;top: -1.7vh; text-decoration: none;font-size: 150%;color:#f0f0f0;}
-    .topnav{position: sticky;height: 5vh;}
     .topnav img {transition: filter 0.25s; filter:brightness(0.635) ;margin: 3px 3px 3px 3px;height:45px;}
     .topnav img:hover{filter:brightness(1);}
     .topnav .logo{transition: color 0.25s;text-decoration: none;}
