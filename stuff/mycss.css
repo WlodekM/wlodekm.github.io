@@ -80,6 +80,13 @@
     .column.side {-webkit-flex: 1;-ms-flex: 1;flex: 1;}
     
     /*topnav*/
+    .topnav {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: calc(100vw - 40px);
+        height: 50px;
+    }
     .topnav{--margin: 20px;padding-left:var(--margin);padding-top:var(--margin);padding-right:var(--margin);padding-bottom:var(--margin);background-color: rgba(0, 0, 0, 0.4);}
     .spacer{flex: 1 auto;margin: 0;padding: 0;box-sizing: border-box;}
     .topnav h2 {margin: 0;padding: 0;box-sizing: border-box;}
