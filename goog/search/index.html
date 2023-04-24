@@ -25,7 +25,7 @@
                 console.log(data);
                 search = data
                 search["items"].forEach(element => {
-                    $("#result").append(`<div id="result"><font face="Pixelated MS Sans Serif"><a href="${element["displayLink"]}"><b>${element["htmlTitle"]}</b></a><br><font size="-1">${element["htmlSnippet"]}</font></font></div><br>`)
+                    $("#result").append(`<div id="result"><font face="Pixelated MS Sans Serif"><a href="${element["formattedUrl"]}"><b>${element["htmlTitle"]}</b></a><br><font size="-1">${element["htmlSnippet"]}</font></font></div><br>`)
                 });
                 $("#stats").html(`Results <b>1 - 10</b> of about <b>${search["searchInformation"]["formattedTotalResults"]}</b>. Search took <b>${search["searchInformation"]["searchTime"]} seconds.`)
             });
@@ -74,6 +74,7 @@
             </tr>
         </tbody>
     </table>
+    <br>
 
     <span id="result">
 
