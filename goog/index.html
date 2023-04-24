@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Goog</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script>
+	        function basicPopup(url,height=500,width=500){window.open(url,'popUpWindow',`height=${height},width=${width},left=0,top=0,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=no`);}
+            var chance = Math.round((Math.random())*50)
+            console.log(chance);
+            if(chance==5){
+                basicPopup("vistor.html",500,500)
+            }
+        </script>
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/98.css"
+        >
+    </head>
+    <body>
+        <div id="spacer" style="height:25vh"></div>
+        <form method="GET" action="/goog/search/">
+            <center>
+                <div class="logo">
+                    <img src="./Goog.png" style="width:25vw">
+                </div>
+                <table border="0" cellspacing="0" cellpadding="5" width="70%">
+                    <tbody>
+                        <td bgcolor="#eee" style="padding:5px">
+                            <center>
+                                Search the web using Goog!
+                                <br>
+                                <input type="text" id="search" style="width: 250px;" name="q">
+                                <br>
+                                <center>
+                                    <input type="submit" value="Goog Search">
+                                    <input type="submit" value="I'm feeling lucky">
+                                </center>
+                            </center>
+                        </td>
+                    </tbody>
+                </table>
+            </center>
+        </form>
+    </body>
+</html>

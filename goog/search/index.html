@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <title id="title">Goog search</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+        });
+        const question = params.q
+        console.log(question);
+
+        //Goog search
+        const url = `https://goog.fakefurry.repl.co/search/json/api/question/goog/api/search?q=${question}`;
+        var search
+
+        $(document).ready(function () {
+            $("#search").text(question)
+            $("#title").text(`Goog search - ${question}`)
+            $("#searchinput").val(question)
+            $.getJSON(url, function (data) {
+                console.log(data);
+                search = data
+                search["items"].forEach(element => {
+                    $("#result").append(`<div id="result"><font face="Pixelated MS Sans Serif"><a href="${element["displayLink"]}"><b>${element["htmlTitle"]}</b></a><br><font size="-1">${element["htmlSnippet"]}</font></font></div><br>`)
+                });
+                $("#stats").html(`Results <b>1 - 10</b> of about <b>${search["searchInformation"]["formattedTotalResults"]}</b>. Search took <b>${search["searchInformation"]["searchTime"]} seconds.`)
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <table border="0" cellpadding="2" cellspacing="0">
+        <tbody>
+            <tr nowrap>
+                <td rowspan="2">
+                    <a href="..">
+                        <img border="0" src="../Goog.png" height="78" alt="Google "></a>
+                </td>
+                <td nowrap>
+                </td>
+            </tr>
+            <tr nowrap>
+                <td align="left" valign="middle">
+                    <br><br>
+                    <form method="GET" action="/goog/searth/">
+                        <input type="text" name="q" size="31" maxlength="256" value="" id="searchinput">
+                        <input type="hidden" name="lr" value="">
+                        <input type="hidden" name="safe" value="off">
+                        <input type="submit" name="btnG" value="Goog Search">
+                        <input type="submit" name="btnI" value="I'm Feeling Lucky">
+                    </form>
+                    <br>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table width="100%" cellpadding="2" cellspacing="0" border="0">
+        <tbody>
+            <tr>
+                <td bgcolor="#3366cc" align="left" nowrap="">
+                    <font size="-1" color="white">Searched the web for
+                        <b id="search"></b>.  
+                    </font>
+                </td>
+                <td bgcolor="#3366cc" align="right" nowrap="">
+                    <font size="-1" color="white" id="stats"></font>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <span id="result">
+
+    </span>
+
+    <center>
+        <table width="100%" cellpadding="2" cellspacing="0" border="0">
+            <tbody>
+                <tr>
+                    <td width="100%" bgcolor="#3366cc">
+                        <font face="Pixelated MS Sans Serif" color="white">
+                            <font size="-1">
+                                <center>
+                                    <!-- </a> - <a href="/web/20001203011300/http://www.google.com/intl/en_extra/services/">
+                                        <font color="white">Add Goog to your Site</font>
+                                    </a> - <a
+                                        href="/web/20001203011300/http://www.google.com/intl/en_extra/language.html">
+                                        <font color="white">Google in your Language</font>
+                                    </a> - <b><a
+                                            href="/web/20001203011300/http://www.google.com/intl/en_extra/about.html">
+                                            <font color="white">All About Goog</font>
+                                    </a></b> -->
+                                </center>
+                            </font>
+                        </font>
+                    </td>
+                </tr>
+            </tbody>
+        </table><br>
+        <font size="-1" color="#6f6f6f" face="Pixelated MS Sans Serif">©2000 Goog</font>
+    </center>
+</body>
+
+</html>

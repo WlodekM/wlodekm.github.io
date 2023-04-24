@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <script>
+        function basicPopup(url,height=500,width=500){window.open(url,'popUpWindow',`height=${height},width=${width},left=0,top=0,resizable=no,scrollbars=no,toolbar=no,menubar=no,location=no,directories=no, status=no`);}
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Congratulations!</h1>
+        <p>You are the <strong>1,000,000<sup>th</sup></strong> visitor!</p>
+        <button onclick="basicPopup('popup.html')">Click here to claim your prize!</button>
+    </center>
+    <style>
+        button{
+            background: rgb(0,238,0);
+            background: linear-gradient(0deg, rgba(0,238,0,1) 0%, rgba(168,255,168,1) 100%);
+            border: #0a0 2px solid;
+            border-radius: 3px;
+        }
+        button:hover{
+            border: #0d0 2px solid;
+            cursor: pointer;
+        }
+    </style>
+</body>
+</html>
