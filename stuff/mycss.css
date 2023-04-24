@@ -80,6 +80,13 @@
     .column.side {-webkit-flex: 1;-ms-flex: 1;flex: 1;}
     
     /*topnav*/
+    .topnav {
+        position: fixed;
+        top: 0;
+        z-index: 999;
+        width: calc(100vw - 40px);
+        height: 50px;
+    }
     .topnav{--margin: 20px;padding-left:var(--margin);padding-top:var(--margin);padding-right:var(--margin);padding-bottom:var(--margin);background-color: rgba(0, 0, 0, 0.4);}
     .spacer{flex: 1 auto;margin: 0;padding: 0;box-sizing: border-box;}
     .topnav h2 {margin: 0;padding: 0;box-sizing: border-box;}
@@ -87,7 +94,6 @@
     .topnav{position: sticky;bottom: 00px;}
     .logo {position: absolute;top: 36%; text-decoration: none; color:#f0f0f0;font-size: 200%;font-family: monospace;font-weight: 600;}
     .link {position: sticky;top: -1.7vh; text-decoration: none;font-size: 150%;color:#f0f0f0;}
-    .topnav{position: sticky;height: 5vh;}
     .topnav img {transition: filter 0.25s; filter:brightness(0.635) ;margin: 3px 3px 3px 3px;height:45px;}
     .topnav img:hover{filter:brightness(1);}
     .topnav .logo{transition: color 0.25s;text-decoration: none;}
