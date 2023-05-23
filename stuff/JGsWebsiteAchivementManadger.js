@@ -11,8 +11,8 @@ wlodekmCheats.createCheatMenuElement = (function(){
 });
 wlodekmCheats.menu = wlodekmCheats.createCheatMenuElement()
 // Function for addin an element ( broken rn :( )
-wlodekmCheats.createElement = (function(type,id){
+wlodekmCheats.createElement = (function(type,eid){
   let elem = document.createElement("div");
-  elem.id = id;
+  elem.id = eid;
   return(wlodekmCheats.menu.appendChild(elem))
 });
