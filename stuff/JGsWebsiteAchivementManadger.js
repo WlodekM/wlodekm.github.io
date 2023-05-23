@@ -9,3 +9,9 @@ wlodekmCheats.createCheatMenuElement = (function(){
   return(document.body.appendChild(elem))
 });
 wlodekmCheats.menu = wlodekmCheats.createCheatMenuElement()
+// Function for addin an element
+wlodekmCheats.createElement = (function(type,id){
+  let elem = document.createElement("div");
+  elem.id = id;
+  return(wlodekmCheats.menu.appendChild(elem))
+});
