@@ -2,7 +2,7 @@
 // javascript: req = new XMLHttpRequest(); req.open('GET', 'https://wlodekm.github.io/stuff/JGsWebsiteAchivementManadger.js'); req.onload = function() { eval(this.responseText); }; req.send();
 // Still dont know how to call this
 var wlodekmCheats = {}
-wlodekmCheats.page = document.getElementsId("pagearea")
+wlodekmCheats.page = document.getElementById("pagearea")
 // Function for creating the menu element
 wlodekmCheats.createCheatMenuElement = (function(){
   let elem = document.createElement("div");
