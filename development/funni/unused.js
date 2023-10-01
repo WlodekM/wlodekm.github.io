@@ -1,4 +1,4 @@
-var buisness="unused";const unused=index.html;function HYPERLINK_BLOCKED(){document.write(buisness)}
+var bimsnes="<code>become_a_BIG_SHOT()</code>";const unused="index.html";function HYPERLINK_BLOCKED(){document.write(bimsnes)};setTimeout(function(){document.getElementById("mus").play()},1000);document.body.onclick = (function(){document.getElementById("mus").play()});function h(){var hi = document.getElementsByTagName("secrets")[0].style.display="block"}
                                                             //Where... Where am I?
                                                             //Hello...? Anyone...?
                                                             //Is... anybody out there...?
@@ -9,5 +9,3 @@ var buisness="unused";const unused=index.html;function HYPERLINK_BLOCKED(){docum
                                                             //It's so dark here.
                                                             //Someone, anyone, if you can hear me...
                                                             //Say something... please...
-
-                                                            
