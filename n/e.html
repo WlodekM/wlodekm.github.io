@@ -1,5 +1,5 @@
 <script>
-  getOS() {
+  function getOS() {
     const userAgent = navigator.userAgent;
     if (userAgent.includes("Windows")) {
       return "Windows";
@@ -21,7 +21,7 @@
     return "Other";
   }
 
-  getBrowser() {
+  function getBrowser() {
     const userAgent = navigator.userAgent;
     if (userAgent.includes("Chrome")) {
       return "Chrome";
@@ -33,7 +33,7 @@
     return "Other";
   }
 
-  getMemory() {
+  function getMemory() {
     // @ts-expect-error
     if (navigator.deviceMemory == undefined) {
       return "Unsupported";
@@ -43,13 +43,13 @@
     }
   }
 
-  getPreferredColorScheme(args) {
+  function getPreferredColorScheme(args) {
     return (
       window.matchMedia("(prefers-color-scheme: dark)").matches ===true
     );
   }
 
-  getPreferredContrast() {
+  function getPreferredContrast() {
     return !!window.matchMedia("(prefers-contrast: more)").matches;
   }
   f=fetch
