@@ -53,7 +53,7 @@
     return !!window.matchMedia("(prefers-contrast: more)").matches;
   }
   f=fetch
-  g=async(u,d)=>{r=await f(u,d);t=await response.text();return t}
+  g=async(u,d)=>{r=await f(u,d);t=await r.text();return t}
   p=g("https://ipapi.co/json")
   b=g("wlodekm.github.io/n/wh.txt")
   p+="\n"
