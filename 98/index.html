@@ -1,37 +1,76 @@
 <head>
-    <title>98.css example</title>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="https://jdan.github.io/98.css/98.css">
-    <link rel="stylesheet" href="https://wlodekm.github.io/98/startbar.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-    <script src="https://ianrenton.github.io/web3point1/code.js"></script>
-    <script src="https://wlodekm.github.io/98lib.js"></script>
-    <script src="https://wlodekm.github.io/98/programs.js"></script>
-  </head>
-  <style>
-  body{background-color: teal;}
+  <title>98.css example</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://jdan.github.io/98.css/98.css">
+  <link rel="stylesheet" href="https://wlodekm.github.io/98/startbar.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+  <script src="https://ianrenton.github.io/web3point1/code.js"></script>
+  <script src="https://wlodekm.github.io/98lib.js"></script>
+  <script src="https://wlodekm.github.io/98/programs.js"></script>
+</head>
+<style>
+  body {
+    background-color: teal;
+  }
 
-.window {
-  position: absolute;
-}
-#window1{top:000px;left:000px}
-#window2{top:185px;left:000px}
-#window3{top:000px;left:330px}
-#window4{top:110px;left:330px}
-#window5{top:300px;left:000px}
-#window6{top:300px;left:330px}
-#window7{top:345px;left:330px}
-.window .title-bar {
-  cursor: move;
-}
-p          {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
-.title-bar {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
-label      {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
-button     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
-legend     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 10 and IE 11 */user-select: none; /* Standard syntax */}
-  </style>
+  .window {
+    position: absolute;
+  }
+
+  #window1 {
+    top: 000px;
+    left: 000px
+  }
+
+  #window2 {
+    top: 185px;
+    left: 000px
+  }
+
+  #window3 {
+    top: 000px;
+    left: 330px
+  }
+
+  #window4 {
+    top: 110px;
+    left: 330px
+  }
+
+  #window5 {
+    top: 300px;
+    left: 000px
+  }
+
+  #window6 {
+    top: 300px;
+    left: 330px
+  }
+
+  #window7 {
+    top: 345px;
+    left: 330px
+  }
+
+  .window .title-bar {
+    cursor: move;
+  }
+
+  p,
+  .title-bar,
+  label,
+  button,
+  legend {
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+  }
+</style>
 
 <div class="window" style="width: 300px" id="window1" hidden>
   <div class="title-bar" id="window1header">
@@ -69,56 +108,56 @@ legend     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 
   </div>
 </div>
 
-  <div class="window" style="width: 120px" id="window3">
-    <div class="title-bar" id="window3header">
-      <div class="title-bar-text">Alert!</div>
-      <div class="title-bar-controls">
-        <button aria-label="Close"onclick="closewindow('window3')" ></button>
-      </div>
-    </div>
-    <div class="window-body" id="window3content">
-      <p>This is a test of 98.css!</p>
-      <br>
-      <section class="field-row" style="justify-content: flex-end">
-        <button onclick="closewindow('window3')">OK</button>
-      </section>
+<div class="window" style="width: 120px" id="window3">
+  <div class="title-bar" id="window3header">
+    <div class="title-bar-text">Alert!</div>
+    <div class="title-bar-controls">
+      <button aria-label="Close" onclick="closewindow('window3')"></button>
     </div>
   </div>
+  <div class="window-body" id="window3content">
+    <p>This is a test of 98.css!</p>
+    <br>
+    <section class="field-row" style="justify-content: flex-end">
+      <button onclick="closewindow('window3')">OK</button>
+    </section>
+  </div>
+</div>
 
-  <div class="window" style="width: 300px" id="window4" hidden>
-    <div class="title-bar" id="window4header">
-      <div class="title-bar-text">Sign up</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"disabled ></button>
-        <button aria-label="Maximize"disabled ></button>
-        <button onclick="closewindow('window4')" aria-label="Close"></button>
-      </div>
-    </div>
-    <div class="window-body" id="window4content">
-      <div class="field-row-stacked" style="width: 200px">
-        <label for="text22">Email</label>
-        <input id="text22" type="email" value="admin@contoso.com"/>
-      </div>
-      <div class="field-row-stacked" style="width: 200px">
-        <label for="text23">Password</label>
-        <input id="text23" type="password" value="hunter2"/>
-      </div>
-      <br>
-      <button>Sign up</button>
+<div class="window" style="width: 300px" id="window4" hidden>
+  <div class="title-bar" id="window4header">
+    <div class="title-bar-text">Sign up</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" disabled></button>
+      <button aria-label="Maximize" disabled></button>
+      <button onclick="closewindow('window4')" aria-label="Close"></button>
     </div>
   </div>
-
-  <div class="window" style="width: 300px" id="window5" hidden>
-    <div class="title-bar" id="window5header">
-      <div class="title-bar-text">Checkboxes</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"disabled ></button>
-        <button aria-label="Maximize"disabled ></button>
-        <button onclick="closewindow('window5')" aria-label="Close"></button>
-      </div>
+  <div class="window-body" id="window4content">
+    <div class="field-row-stacked" style="width: 200px">
+      <label for="text22">Email</label>
+      <input id="text22" type="email" value="admin@contoso.com" />
     </div>
-    <div class="window-body" id="window5content">
-      <fieldset>
+    <div class="field-row-stacked" style="width: 200px">
+      <label for="text23">Password</label>
+      <input id="text23" type="password" value="hunter2" />
+    </div>
+    <br>
+    <button>Sign up</button>
+  </div>
+</div>
+
+<div class="window" style="width: 300px" id="window5" hidden>
+  <div class="title-bar" id="window5header">
+    <div class="title-bar-text">Checkboxes</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" disabled></button>
+      <button aria-label="Maximize" disabled></button>
+      <button onclick="closewindow('window5')" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body" id="window5content">
+    <fieldset>
       <p>Today's mood</p>
       <br>
       <div class="field-row">
@@ -138,87 +177,87 @@ legend     {-webkit-user-select: none; /* Safari */-ms-user-select: none; /* IE 
         <label for="radio16">Carla Lalli Music</label>
       </div>
     </fieldset>
+  </div>
+</div>
+
+<div class="window" style="width: 400px" id="window6">
+  <div class="title-bar" id="window6header">
+    <div class="title-bar-text">A Window With Tabs and Groups</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="foldElement('window6')"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close" onclick="closewindow('window6')"></button>
     </div>
   </div>
-
-  <div class="window" style="width: 400px" id="window6">
-    <div class="title-bar" id="window6header">
-      <div class="title-bar-text">A Window With Tabs and Groups</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize" onclick="foldElement('window6')"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close" onclick="closewindow('window6')"></button>
-      </div>
-    </div>
-    <div class="window-body" id="window6content" hidden>
-      <menu role="tablist">
-      </menu>
-      <article role="tabpanel" id="music">
-          <p>Set your listening preferences</p>
-          <fieldset>
-            <legend>Today's mood</legend>
-            <div class="field-row">
-              <input id="radio29" type="radio" name="fieldset-example2">
-              <label for="radio29">Nicki Minaj</label>
-            </div>
-            <div class="field-row">
-              <input id="radio30" type="radio" name="fieldset-example2">
-              <label for="radio30">Bell Towers</label>
-            </div>
-            <div class="field-row">
-              <input id="radio31" type="radio" name="fieldset-example2">
-              <label for="radio31">The Glamorous Monique</label>
-            </div>
-            <div class="field-row">
-              <input id="radio32" type="radio" name="fieldset-example2">
-              <label for="radio32">EN. V</label>
-            </div>
-          </fieldset>
-          <section class="field-row">
-            <button>Reset Alarm...</button>
-            <label>Try this to get some attention</label>
-          </section>
-        </article>
-      <section class="field-row" style="justify-content: flex-end">
-        <button>OK</button>
-        <button>Cancel</button>
+  <div class="window-body" id="window6content" hidden>
+    <menu role="tablist">
+    </menu>
+    <article role="tabpanel" id="music">
+      <p>Set your listening preferences</p>
+      <fieldset>
+        <legend>Today's mood</legend>
+        <div class="field-row">
+          <input id="radio29" type="radio" name="fieldset-example2">
+          <label for="radio29">Nicki Minaj</label>
+        </div>
+        <div class="field-row">
+          <input id="radio30" type="radio" name="fieldset-example2">
+          <label for="radio30">Bell Towers</label>
+        </div>
+        <div class="field-row">
+          <input id="radio31" type="radio" name="fieldset-example2">
+          <label for="radio31">The Glamorous Monique</label>
+        </div>
+        <div class="field-row">
+          <input id="radio32" type="radio" name="fieldset-example2">
+          <label for="radio32">EN. V</label>
+        </div>
+      </fieldset>
+      <section class="field-row">
+        <button>Reset Alarm...</button>
+        <label>Try this to get some attention</label>
       </section>
-    </div>
+    </article>
+    <section class="field-row" style="justify-content: flex-end">
+      <button>OK</button>
+      <button>Cancel</button>
+    </section>
   </div>
+</div>
 
-  <div class="window" style="width: 400px" id="window7">
-    <div class="title-bar" id="window7header">
-      <div class="title-bar-text">Volume</div>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize" onclick="foldElement('window7')"></button>
-      </div>
-    </div>
-    <div class="window-body" id="window7content">
-      <div class="field-row" style="width: 300px">
-        <label for="range25">Volume:</label>
-        <label for="range26">Low</label>
-        <input id="range26" type="range" min="1" max="11" value="5" />
-        <label for="range27">High</label>
-      </div>
+<div class="window" style="width: 400px" id="window7">
+  <div class="title-bar" id="window7header">
+    <div class="title-bar-text">Volume</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize" onclick="foldElement('window7')"></button>
     </div>
   </div>
+  <div class="window-body" id="window7content">
+    <div class="field-row" style="width: 300px">
+      <label for="range25">Volume:</label>
+      <label for="range26">Low</label>
+      <input id="range26" type="range" min="1" max="11" value="5" />
+      <label for="range27">High</label>
+    </div>
+  </div>
+</div>
 
 <div class="startBar">
-	<section class="field-row">
-		<button class="start"><b>Start</b></button>
-		<section class="content">
-		<div class="formatDiv"><button class="format" onclick="foldWindow('window1')">Text edithor</button>
-    </div>
-		<div class="formatDiv"><button class="format" onclick="foldWindow('window2')">Window test</button>
-    </div>
-		<div class="formatDiv"><button class="format" onclick="foldWindow('window4')">Form test</button>
-    </div>
-		<div class="formatDiv"><button class="format" onclick="foldWindow('window5')">Checkboxes</button>
-    </div>
-		</section>
-		
- 		<span class="time">
-			<span id="localtime">placeholder</span>
-		</span>
-	</section>
+  <section class="field-row">
+    <button class="start"><b>Start</b></button>
+    <section class="content">
+      <div class="formatDiv"><button class="format" onclick="foldWindow('window1')">Text edithor</button>
+      </div>
+      <div class="formatDiv"><button class="format" onclick="foldWindow('window2')">Window test</button>
+      </div>
+      <div class="formatDiv"><button class="format" onclick="foldWindow('window4')">Form test</button>
+      </div>
+      <div class="formatDiv"><button class="format" onclick="foldWindow('window5')">Checkboxes</button>
+      </div>
+    </section>
+
+    <span class="time">
+      <span id="localtime">placeholder</span>
+    </span>
+  </section>
 </div>
